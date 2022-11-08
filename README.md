@@ -7,3 +7,5 @@
   - @EnableAutoConfiguration
   - @ComponentScan 
   - @SpringBootConfiguration 
+
+## Gerenciando configurações
