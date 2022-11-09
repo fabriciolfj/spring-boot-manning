@@ -1,0 +1,19 @@
+server:
+  port: 8080
+  shutdown: graceful
+
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 1m
+
+app:
+  sbip:
+    ct:
+      name: Rastreador de cursos
+      ip: 127.0.0.1
+      port: 9090
+      security:
+        enabled: true
+        token: 038837hfjh89iohfiodhfdl
+        roles: USER,ADMIN
+  timeout: ${APP_TIMEOUT:0}
