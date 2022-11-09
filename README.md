@@ -9,3 +9,5 @@
   - @SpringBootConfiguration 
 
 ## Gerenciando configurações
+- spring permite externalizarmos as configurações de nossos aplicativos e podemos diferencia-las por ambiente (dev, hom ou prod por exemplo)
+- alem de externalizar, podemos fazer uso de configurações via linha de comando ou variáveis de ambiente.
