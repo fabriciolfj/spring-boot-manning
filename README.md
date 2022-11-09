@@ -17,3 +17,22 @@
   - arquivo de configuração
   - @PropertySource
   - class main   
+
+### ConfigurationProperties
+- uma forma de representar uma configuração personalizada em uma classe java, para isso precisamos anotar-la com @ConfigurationProperties("prefixo")
+- cada variável de instância dessa classe, deve corresponder ao sufixo da propriedade salientada na anotação. Exemplo: prefixo: app.url, sufixo: port, host (ter variáveis de instância com nome port, host e corresponder ao tipo).
+- Além das situações salientadas acima, devemos adicionar a depêndencia abaixo, para inserir as propriedades no meta-data da app.
+```
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+```
+- por fim, referenciar no scan da aplicação a classe properties:
+```
+@EnableConfigurationProperties(ApplicationProperties.class)
+@SpringBootApplication
+@ComponentScan
+public class SpringBootAppDemoApplication {
+```
