@@ -36,3 +36,4 @@
 @ComponentScan
 public class SpringBootAppDemoApplication {
 ```
+- sugestão: uma forma de fazer uso da construção das propriedades via construct da classe, sem uso das propriedades setters, é anota-la com @ConstructorBinding.
