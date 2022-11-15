@@ -38,4 +38,88 @@ public class SpringBootAppDemoApplication {
 ```
 - sugestão: uma forma de fazer uso da construção das propriedades via construct da classe, sem uso das propriedades setters, é anota-la com @ConstructorBinding.
 
-### Customizing logging in a Spring Boot application
+### Customizando logs no spring boot
+- podemos customizar os logs no console e no arquivo gerado, via properties:
+````
+#logging:
+#  file:
+#    console: clr(%d{dd-MM-yyyy HH:mm:ss.SSS}){yellow}%clr(${PID:- }){verde} %magenta([%thread]) %highlight([%-5level])%clr(%-40.40logger{39}){cyan} %msg%n
+#    name: application.log
+#  logback:
+#    rollingpolicy:
+#      max-file-size: 1MB
+#      max-history: 1
+````
+- podemos fazer uso de outra lib de log, retirando antes a lib padrão do started web no pom do projeto:
+````
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+````
+- No exemplo desse projeto, fui substituida a lib logback pela log4j2.
+- abaixo a nova lib inserida no pom e , caso queira, uma personzalição do log, que devemos deixar dentro da pasta resources do projeto.
+````
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+		</dependency>
+````
+- configuração do log personalizada:
+````
+<Configuration status="WARN">
+    <Properties>
+        <Property name="LOG_PATTERN">
+            %d{yyyy-MM-dd HH:mm:ss.SSS} [%5p] [%15.15t] %-40.40c{1.} : %m%n%ex
+        </Property>
+    </Properties>
+    <Appenders>
+
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}" />
+        </Console>
+        <RollingFile name="FileAppender"
+                     fileName="logs/application-log4j2.log"
+                     filePattern="logs/application-log4j2-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout>
+                <Pattern>${LOG_PATTERN}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10MB" />
+                <TimeBasedTriggeringPolicy interval="7" />
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.manning.sbip" level="debug" additivity="false">
+            <AppenderRef ref="FileAppender"/>
+        </Logger>
+        <Logger name="com.manning.sbip" level="debug" additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+        </Logger>
+        <Logger name="org.springframework.boot" level="info" additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+        </Logger>
+        <Root level="info">
+            <AppenderRef ref="FileAppender"/>
+            <AppenderRef ref="ConsoleAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>
+````
+- o nome do arquivo deve ser log4j2.xml (yml e json também são suportados) ou log4j2-spring.xml
+
+### Bean validation
+- o spring por default utiliza a implementação hibernate da especificação bean validation
+- podemos criar nossas anotações (caso vincule-as em classes que implementam constraintvalidator), ou utilizar as que o javax (jakarta agora) nos oferece. Exemplo:
+````
+    @Min(value = 1, message = "A course should have a minimum of 1 rating")
+    @Max(value = 5, message = "A course should have a maximum of 5 rating")
+    private int ration;
