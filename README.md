@@ -123,3 +123,9 @@ public class SpringBootAppDemoApplication {
     @Min(value = 1, message = "A course should have a minimum of 1 rating")
     @Max(value = 5, message = "A course should have a maximum of 5 rating")
     private int ration;
+````
+
+### Spring data
+- permite acesso/manipular dados em diferentes fontes, seja ela em base relacionais ou não relacionais.
+- abstrai toda a configuração necessária para se comunicar com a base de dados, apenas fornecemos algumas informacoes no properties da aplicacao
+- fornece apis que nos auxiliam na realizacao de crud no database
