@@ -9,6 +9,6 @@ public class ApplicationStartingEventListener implements ApplicationListener<App
 
     @Override
     public void onApplicationEvent(ApplicationStartedEvent event) {
-        System.out.println("application inicializando em " + new Date(event.getTimestamp()));
+        //System.out.println("application inicializando em " + new Date(event.getTimestamp()));
     }
 }

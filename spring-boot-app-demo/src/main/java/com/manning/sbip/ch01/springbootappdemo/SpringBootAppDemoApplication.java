@@ -2,6 +2,8 @@ package com.manning.sbip.ch01.springbootappdemo;
 
 import com.manning.sbip.ch01.springbootappdemo.config.ApplicationProperties;
 import com.manning.sbip.ch01.springbootappdemo.config.DbConfiguration;
+import com.manning.sbip.ch01.springbootappdemo.entity.Course;
+import com.manning.sbip.ch01.springbootappdemo.entity.User;
 import com.manning.sbip.ch01.springbootappdemo.service.ApplicationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +18,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.event.EventListener;
 import org.springframework.core.env.Environment;
 
-import javax.xml.crypto.Data;
+import javax.validation.Validation;
+import javax.validation.Validator;
+import javax.validation.ValidatorFactory;
 import java.util.Date;
 import java.util.Properties;
 
@@ -49,13 +53,31 @@ public class SpringBootAppDemoApplication {
 
 	@EventListener(ApplicationReadyEvent.class)
 	public void applicationReadyEvent(ApplicationReadyEvent event) {
-		System.out.println("Aplicativo esta pronto em " + new Date(event.getTimestamp()));
+		LOG.info("Aplicativo esta pronto em {}",  new Date(event.getTimestamp()));
 	}
 
 	@Bean
 	public CommandLineRunner commandLineRunner() {
 		return args -> {
-			LOG.info("SpringBootAppDemoApplication CommandLineRunner executado");
+			/*final Course course = new Course();
+			course.setId(1L);
+			course.setRation(0);
+
+			Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
+			var violations = validator.validate(course);
+
+			violations.forEach(c -> LOG.error("fail violation, details: {}", c.getMessage()));*/
+
+			User user1 = User.builder().userName("user1").password("123SS").build();
+			User user2 = User.builder().userName("user2").password("F@bricio12").build();
+
+			Validator validation = Validation.buildDefaultValidatorFactory().getValidator();
+			var violations = validation.validate(user1);
+
+			violations.forEach(s -> LOG.error("User 1 não atendeu a validacao do password: {}", s.getMessage()));
+
+			violations = validation.validate(user2);
+			violations.forEach(s -> LOG.error("User 2 não atendeu a validacao do password: {}", s.getMessage()));
 		};
 	}
 }

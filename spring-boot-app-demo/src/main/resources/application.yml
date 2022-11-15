@@ -17,3 +17,12 @@ app:
         token: 038837hfjh89iohfiodhfdl
         roles: USER,ADMIN
   timeout: ${APP_TIMEOUT:0}
+
+#logging:
+#  file:
+#    console: clr(%d{dd-MM-yyyy HH:mm:ss.SSS}){yellow}%clr(${PID:- }){verde} %magenta([%thread]) %highlight([%-5level])%clr(%-40.40logger{39}){cyan} %msg%n
+#    name: application.log
+#  logback:
+#    rollingpolicy:
+#      max-file-size: 1MB
+#      max-history: 1
