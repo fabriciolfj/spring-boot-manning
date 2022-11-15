@@ -128,4 +128,6 @@ public class SpringBootAppDemoApplication {
 ### Spring data
 - permite acesso/manipular dados em diferentes fontes, seja ela em base relacionais ou não relacionais.
 - abstrai toda a configuração necessária para se comunicar com a base de dados, apenas fornecemos algumas informacoes no properties da aplicacao
-- fornece apis que nos auxiliam na realizacao de crud no database
+- fornece apis que nos auxiliam na realizacao de crud no databasep
+- existem alguns submodulos dentro do spring data, entre eles o spring data commons, que fornece uma base para outros:
+- spring data commons, oferece as seguintes interfaces (ordem de hierarquia): repository -> crudrepository -> pagingandsortingrepository -> base expecífica (ex: springdatajpa)
