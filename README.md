@@ -132,4 +132,4 @@ public class SpringBootAppDemoApplication {
 - existem alguns submodulos dentro do spring data, entre eles o spring data commons, que fornece uma base para outros:
 - spring data commons, oferece as seguintes interfaces (ordem de hierarquia): repository -> crudrepository -> pagingandsortingrepository -> base expecífica (ex: springdatajpa)
 
-#### Configurando um banco de dados em um aplicativo Spring Boot
+#### Configurando um banco de dados em um aplicativo Spring Boot (3.2)
