@@ -1,0 +1,19 @@
+2022-11-14 20:36:28.354  INFO 23573 --- [restartedMain] c.m.s.c.s.SpringBootAppDemoApplication   : Starting SpringBootAppDemoApplication using Java 19 on MacBook-Pro-de-Fabricio.local with PID 23573 (/Users/fabriciojacob/Library/CloudStorage/OneDrive-Pessoal/Documentos/repositorio_8/spring-boot-manning/spring-boot-app-demo/target/classes started by fabriciojacob in /Users/fabriciojacob/Library/CloudStorage/OneDrive-Pessoal/Documentos/repositorio_8/spring-boot-manning/spring-boot-app-demo)
+2022-11-14 20:36:28.355  INFO 23573 --- [restartedMain] c.m.s.c.s.SpringBootAppDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-11-14 20:36:28.413  INFO 23573 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-14 20:36:28.413  INFO 23573 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-14 20:36:29.337  INFO 23573 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-14 20:36:29.347  INFO 23573 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-14 20:36:29.347  INFO 23573 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-14 20:36:29.390  INFO 23573 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-14 20:36:29.390  INFO 23573 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 977 ms
+2022-11-14 20:36:29.824  INFO 23573 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-14 20:36:29.832  INFO 23573 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-11-14 20:36:29.863  INFO 23573 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-14 20:36:29.875  INFO 23573 --- [restartedMain] c.m.s.c.s.SpringBootAppDemoApplication   : Started SpringBootAppDemoApplication in 1.986 seconds (JVM running for 2.327)
+2022-11-14 20:36:29.941  INFO 23573 --- [restartedMain] c.m.s.c.s.SpringBootAppDemoApplication   : SpringBootAppDemoApplication CommandLineRunner executado
+2022-11-14 20:36:29.943  INFO 23573 --- [restartedMain] c.m.s.c.s.SpringBootAppDemoApplication   : Value time limit app configuration 0
+2022-11-14 20:36:29.944  INFO 23573 --- [restartedMain] c.m.s.c.s.SpringBootAppDemoApplication   : User fabriciojacob passwordp@sswOrd
+2022-11-14 20:36:29.949  INFO 23573 --- [restartedMain] c.m.s.c.s.SpringBootAppDemoApplication   : ApplicationProperties(name=Rastreador de cursos, ip=127.0.0.1, port=9090, security=ApplicationProperties.Security(enabled=true, token=038837hfjh89iohfiodhfdl, roles=[USER, ADMIN]))
+2022-11-14 20:40:52.400  INFO 23573 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2022-11-14 20:40:52.408  INFO 23573 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete

@@ -1,24 +1,46 @@
 package com.manning.sbip.ch01.springbootappdemo.entity;
 
+import lombok.EqualsAndHashCode;
+
+import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
+@Table(name = "COURSES")
+@Entity
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Course {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private Long id;
+    @Column(name = "NAME")
     private String name;
+    @Column(name = "CATEGORY")
     private String category;
     @Min(value = 1, message = "A course should have a minimum of 1 rating")
     @Max(value = 5, message = "A course should have a maximum of 5 rating")
+    @Column(name = "RATING")
     private int ration;
+    @Column(name = "DESCRIPTION")
+    private String description;
 
     public Course() { }
 
-    public Course(Long id, String name, String category, int ration) {
-        this.id = id;
+    public Course(String name, String category, int ration, String description) {
         this.name = name;
         this.category = category;
         this.ration = ration;
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Long getId() {
