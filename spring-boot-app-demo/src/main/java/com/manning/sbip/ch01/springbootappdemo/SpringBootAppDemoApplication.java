@@ -2,7 +2,6 @@ package com.manning.sbip.ch01.springbootappdemo;
 
 import com.manning.sbip.ch01.springbootappdemo.config.ApplicationProperties;
 import com.manning.sbip.ch01.springbootappdemo.config.DbConfiguration;
-import com.manning.sbip.ch01.springbootappdemo.entity.Course;
 import com.manning.sbip.ch01.springbootappdemo.entity.User;
 import com.manning.sbip.ch01.springbootappdemo.service.ApplicationService;
 import org.slf4j.Logger;
@@ -20,7 +19,6 @@ import org.springframework.core.env.Environment;
 
 import javax.validation.Validation;
 import javax.validation.Validator;
-import javax.validation.ValidatorFactory;
 import java.util.Date;
 import java.util.Properties;
 

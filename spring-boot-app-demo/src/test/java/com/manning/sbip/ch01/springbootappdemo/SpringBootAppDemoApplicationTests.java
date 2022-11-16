@@ -4,15 +4,13 @@ import com.manning.sbip.ch01.springbootappdemo.entity.Course;
 import com.manning.sbip.ch01.springbootappdemo.repository.CourseRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-//@SpringBootTest //carrega todo o contexto do spring
+//@SpringBootTest carrega todo o contexto do spring
 @DataJpaTest
 class SpringBootAppDemoApplicationTests {
 
