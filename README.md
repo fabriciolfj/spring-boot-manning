@@ -132,4 +132,9 @@ public class SpringBootAppDemoApplication {
 - existem alguns submodulos dentro do spring data, entre eles o spring data commons, que fornece uma base para outros:
 - spring data commons, oferece as seguintes interfaces (ordem de hierarquia): repository -> crudrepository -> pagingandsortingrepository -> base expecífica (ex: springdatajpa)
 
-#### Configurando um banco de dados em um aplicativo Spring Boot (3.2)
+#### Diferença entre @SpringBootTest e @DataJpaTest
+- a anotação @SpringBootTest levanta todo contexto do spring, ou seja, ele cria um applicationContext que será utilizado nos testes. No entanto as vezes estamos testando algum específico, e não faz sentido carrega todos os beans da aplicação.
+-  a anotação @DataJpaTest, carrega apenas os beans correspondentes ao Jpa. Utíl quando vamos testar apenas a camada DAO.
+
+
+#### 3.4
