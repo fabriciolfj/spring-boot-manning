@@ -117,13 +117,21 @@ public class SpringBootAppDemoApplication {
 - o nome do arquivo deve ser log4j2.xml (yml e json também são suportados) ou log4j2-spring.xml
 
 ### Bean validation
-- o spring por default utiliza a implementação hibernate da especificação bean validation
+- o spring por default utiliz-se a implementação hibernate da especificação bean validation
 - podemos criar nossas anotações (caso vincule-as em classes que implementam constraintvalidator), ou utilizar as que o javax (jakarta agora) nos oferece. Exemplo:
 ````
     @Min(value = 1, message = "A course should have a minimum of 1 rating")
     @Max(value = 5, message = "A course should have a maximum of 5 rating")
     private int ration;
 ````
+- precisamos também adicionar a dependência:
+```
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-validation</artifactId>
+    </dependency>
+
+```
 
 ### Spring data
 - permite acesso/manipular dados em diferentes fontes, seja ela em base relacionais ou não relacionais.
