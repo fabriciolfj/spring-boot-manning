@@ -137,4 +137,47 @@ public class SpringBootAppDemoApplication {
 -  a anotação @DataJpaTest, carrega apenas os beans correspondentes ao Jpa. Utíl quando vamos testar apenas a camada DAO.
 
 
-#### 3.4
+#### Query methods
+- spring data nos fornece uma linguagem fluente para consulta ao banco de dados
+- onde escrevemos o que precisamos na descrição do método
+- esse mecanismo é conhecido como query methods
+- abaixo um exemplo:
+```
+public List<Customer> findByCityOrderByCustomerDesc(final String city)
+```
+- para mais detalhes acesse: https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods
+
+#### Named Query
+- consulta associada a uma entidade
+- vinculo a mesma na própria classe
+- os parametros de nome e query são obrigatórios
+- o hint e lock mode são opcionais
+- exemplo abaixo de criação:
+```
+@NamedQueries({
+        @NamedQuery(name = "Course.findAllByCategoryAndRating", query = "select c from Course where c.category=?1 and c.ration=?2")
+})
+public class Course 
+```
+- exemplo de uso
+```
+Iterable<Course> findAllByCategoryAndRating(final String category, int rating);
+```
+- namedquery não é recomendável, pois polui o pojo com instruções jpql, alem de não dar suporte a query nativas
+
+#### Query
+- fornece acima da assintura do método a consulta jpql ou sql nativa
+- podemos também executar instruções dml
+- alguns exemplos abaixo:
+```
+    @Query("select c from Course c where c.category =:category and c.ration > :rating")
+    Iterable<Course> findAllByCategoryAnRatingGreaterThan(@Param("category") final String category, @Param("rating") final int rating);
+    @Query(value = "select * from course where ration =?1", nativeQuery = true)
+    Iterable<Course> findAllByRating(int rating);
+    @Modifying
+    @Transactional
+    @Query("update course c set c.ration = :rating where c.name = :name")
+    int updateCourseRatingByName(@Param("rating") int rating, @Param("name") final String name);
+```
+
+#### 3.6 

@@ -9,6 +9,10 @@ import javax.validation.constraints.Min;
 @Table(name = "COURSES")
 @Entity
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@NamedQueries({
+        @NamedQuery(name = "Course.findAllByCategoryAndRating", query = "select c from Course c where c.category=?1 and c.rating=?2"),
+        @NamedQuery(name = "Course.findAllByRating", query = "select c from Course c where c.rating=?1")
+})
 public class Course {
 
     @Id
@@ -22,7 +26,7 @@ public class Course {
     @Min(value = 1, message = "A course should have a minimum of 1 rating")
     @Max(value = 5, message = "A course should have a maximum of 5 rating")
     @Column(name = "RATING")
-    private int ration;
+    private int rating;
     @Column(name = "DESCRIPTION")
     private String description;
 
@@ -31,7 +35,7 @@ public class Course {
     public Course(String name, String category, int ration, String description) {
         this.name = name;
         this.category = category;
-        this.ration = ration;
+        this.rating = ration;
         this.description = description;
     }
 
@@ -67,11 +71,11 @@ public class Course {
         this.category = category;
     }
 
-    public int getRation() {
-        return ration;
+    public int getRating() {
+        return rating;
     }
 
-    public void setRation(int ration) {
-        this.ration = ration;
+    public void setRating(int rating) {
+        this.rating = rating;
     }
 }
