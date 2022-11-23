@@ -5,13 +5,14 @@ server:
 spring:
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
 #  sql:
 #    init:
 #      mode: always
 #      schema-locations: classpath:sql/schema.sql
 #      data-locations: classpath:sql/data.sql
   datasource:
+    initialization-mode: always
     hikari:
       maximum-pool-size: 10
     url: jdbc:h2:mem:sbipdb

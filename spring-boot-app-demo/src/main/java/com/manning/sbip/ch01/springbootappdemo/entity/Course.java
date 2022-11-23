@@ -5,6 +5,8 @@ import lombok.EqualsAndHashCode;
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import java.util.HashSet;
+import java.util.Set;
 
 @Table(name = "COURSES")
 @Entity
@@ -29,6 +31,8 @@ public class Course {
     private int rating;
     @Column(name = "DESCRIPTION")
     private String description;
+    @ManyToMany(mappedBy = "courses")
+    private Set<Author> authors = new HashSet<>();
 
     public Course() { }
 

@@ -1,8 +1,13 @@
 package com.manning.sbip.ch01.springbootappdemo;
 
 import com.manning.sbip.ch01.springbootappdemo.entity.Course;
+import com.manning.sbip.ch01.springbootappdemo.entity.QCourse;
+import com.manning.sbip.ch01.springbootappdemo.repository.AuthorRepository;
 import com.manning.sbip.ch01.springbootappdemo.repository.CourseRepository;
+import com.querydsl.core.types.OrderSpecifier;
+import com.querydsl.jpa.impl.JPAQuery;
 import org.assertj.core.api.Condition;
+import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -10,6 +15,12 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,6 +32,55 @@ class SpringBootAppDemoApplicationTests {
 
 	@Autowired
 	private CourseRepository courseRepository;
+
+	@Autowired
+	private AuthorRepository authorRepository;
+
+	@Autowired
+	private EntityManager entityManager;
+
+	@Test
+	public void whenCountallCoursesThenExpectFiveCourses() {
+		assertThat(authorRepository.getAuthorCourseInfo(2L)).hasSize(3);
+	}
+
+	@Test
+	public void givenCoursesCreateWhenLoadCoursesWithQueryThenExpectCorrectCourseDetails() {
+		courseRepository.saveAll(getCourseList());
+		QCourse course = QCourse.course;
+		JPAQuery query1 = new JPAQuery(entityManager);
+		query1.from(course).where(course.category.eq("Spring"));
+
+		assertThat(query1.fetch().size()).isEqualTo(3);
+
+		JPAQuery query2 = new JPAQuery(entityManager);
+		query2.from(course)
+				.where(course.category.eq("Spring")
+				.and(course.rating.gt(3)));
+
+		assertThat(query2.fetch().size()).isEqualTo(2);
+
+		OrderSpecifier<Integer> descOrderSpecifier = course.rating.desc();
+		assertThat(Lists.newArrayList(courseRepository.findAll(descOrderSpecifier)).get(0).getName())
+				.isEqualTo("Getting Started with Spring Security DSL");
+	}
+
+	@Test
+	public void givenCoursesCreatedWhenLoadCourseswithQueryThenExpectCorrectCourseDetails() {
+		courseRepository.saveAll(getCourseList());
+
+		CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+
+		CriteriaQuery<Course> courseCriteriaQuery = criteriaBuilder.createQuery(Course.class);
+		Root<Course> courseRoot = courseCriteriaQuery.from(Course.class);
+
+		Predicate courseCategoryPredicate = criteriaBuilder.equal(courseRoot.get("category"), "Spring");
+		courseCriteriaQuery.where(courseCategoryPredicate);
+
+		TypedQuery<Course> query = entityManager.createQuery(courseCriteriaQuery);
+
+		assertThat(query.getResultList().size()).isEqualTo(3);
+	}
 
 	@Test
 	public void GivenCreateCourseWhenLoadTheCourseThenExpectSameCourse() {

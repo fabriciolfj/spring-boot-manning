@@ -188,4 +188,52 @@ Iterable<Course> findAllByCategoryAndRating(final String category, int rating);
     int updateCourseRatingByName(@Param("rating") int rating, @Param("name") final String name);
 ```
 
-#### 3.6 
+#### QueryDSL
+- junto com o spring data, podemos fazer uso do Criteria API do JPA
+- uma api para escrever consultas ou modificações no banco de dados de forma fluente
+- no entanto é muito verbosa
+- a querydsl veio para sanar o ponto negativo acima do Criteria
+- ela permite escrever consultas de forma fluente, fazendo validação de tipo e da query, em tempo de compilação
+- são geradas classes, com base nas classes com anotação @Entity. Exemplo: Customer, gerada QCustomer
+- e essas estão os operadores de consulta e a validação estática.
+- Para fazer uso devemos adicionar a depêndencia baixo:
+```
+		<dependency>
+			<groupId>com.querydsl</groupId>
+			<artifactId>querydsl-apt</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.querydsl</groupId>
+			<artifactId>querydsl-jpa</artifactId>
+		</dependency>
+		
+			<plugin>
+				<groupId>com.mysema.maven</groupId>
+				<artifactId>apt-maven-plugin</artifactId>
+				<version>1.1.3</version>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>process</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target/generated-sources/java</outputDirectory>
+							<processor>com.querydsl.apt.jpa.JPAAnnotationProcessor</processor>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+```
+- extender a classe abaixo:
+````
+public interface CourseRepository extends PagingAndSortingRepository<Course, Long>, QuerydslPredicateExecutor<Course> {
+````
+- exemplo de uso
+```
+		QCourse course = QCourse.course;
+		JPAQuery query1 = new JPAQuery(entityManager);
+		query1.from(course).where(course.category.eq("Spring"));
+
+		assertThat(query1.fetch().size()).isEqualTo(3);
+```
