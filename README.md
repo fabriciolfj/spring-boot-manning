@@ -237,3 +237,24 @@ public interface CourseRepository extends PagingAndSortingRepository<Course, Lon
 
 		assertThat(query1.fetch().size()).isEqualTo(3);
 ```
+
+#### Conditional bean
+- spring permite delegar ao mesmo a criação de objetos(injeção de dependência) e seu ciclo de vida
+- podemos orientar o spring a criar esses objetos via uma condição
+- abaixo alguns exemplos mais populares:
+```
+    @Bean
+    @Conditional(RelationDatabaseCondition.class)
+    public RelationalDataSourceConfiguration dataSourceConfiguration() {
+        return new RelationalDataSourceConfiguration();
+    }
+    
+    @Configuration
+    @ConditionalOnProperty(value = "fetureToggle.notification", havingValue = "true", matchIfMissing=true)
+    class NotificationSender {
+
+    }
+    havingValue = se for true
+    matchIfMissing = se não for informado, valerá o valor true
+```
+- podemos fazer uso dessas anotações em nível de class ou método
