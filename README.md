@@ -266,11 +266,20 @@ public interface CourseRepository extends PagingAndSortingRepository<Course, Lon
 
 #### Failure Analyzer
 - uma infraestrutura de análise de falhas oferecida pelo spring
-- executa validações para verificar se a aplicação está em funcionamento correto.
+- executa validações para verificar se a aplicação será construida corretamente (tempo de build)
+- para isso a aplicação precisa lançar alguma exception no seu ciclo de vida de construção
+- abaixo um exemplo de uma exception, que está sendo monitorada pelo failure analyzer. O evento é lançado antes de subir a aplicação
+```
+    @EventListener(classes = ContextRefreshedEvent.class) //é executado apos o application listener
+    public void listener() {
+        //throw new UrlNotAccessibleException(url);
+    }
+```
+- registra o problema e possível solução no console
 - precisa estar registrado no spring.factories
 - Um exemplo de uma configuração:
 ```
-public class UrlNotAccessibleFailureAnalyzer extends AbstractFailureAnalyzer<UrlNotAccessibleException> {
+public class UrlNotAccessibleFailureAnalyzer extends AbstractFailureAnalyzer<UrlNotAccessibleException> { //vai disparar caso ocorra a exception informada
 
     @Override
     protected FailureAnalysis analyze(Throwable rootFailure, UrlNotAccessibleException cause) {
@@ -279,7 +288,7 @@ public class UrlNotAccessibleFailureAnalyzer extends AbstractFailureAnalyzer<Url
 }
 
 ```
-- exemplo de um arquivo spring.factories, indicando a classe failure analyzer criada e a configuração necesária:
+- exemplo de um arquivo spring.factories, indicando a classe failure analyzer criada e a configuração necessária:
 ```
 org.springframework.boot.diagnostics.FailureAnalyzer=\
 com.manning.sbip.ch01.springbootappdemo.exceptions.failureanalyzer.UrlNotAccessibleFailureAnalyzer
