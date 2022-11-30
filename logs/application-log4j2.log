@@ -1,0 +1,103 @@
+2022-11-30 15:49:58.076 [ INFO] [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 6.2.5.Final
+2022-11-30 15:49:58.816 [ INFO] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-30 15:49:58.863 [ INFO] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+2022-11-30 15:49:59.186 [ INFO] [  restartedMain] o.e.j.u.log                              : Logging initialized @2188ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-11-30 15:49:59.372 [ INFO] [  restartedMain] o.e.j.s.Server                           : jetty-9.4.49.v20220914; built: 2022-09-14T01:07:36.601Z; git: 4231a3b2e4cb8548a412a789936d640a97b1aa0a; jvm 19+36-2238
+2022-11-30 15:49:59.393 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring embedded WebApplicationContext
+2022-11-30 15:49:59.499 [ INFO] [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-11-30 15:49:59.650 [ INFO] [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-11-30 15:49:59.726 [ INFO] [  restartedMain] o.e.j.s.session                          : DefaultSessionIdManager workerName=node0
+2022-11-30 15:49:59.726 [ INFO] [  restartedMain] o.e.j.s.session                          : No SessionScavenger set, using defaults
+2022-11-30 15:49:59.726 [ INFO] [  restartedMain] o.e.j.s.session                          : node0 Scavenging every 660000ms
+2022-11-30 15:49:59.735 [ INFO] [  restartedMain] o.e.j.s.h.ContextHandler                 : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@3cb2d523{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8080.672094265820111026/],AVAILABLE}
+2022-11-30 15:49:59.735 [ INFO] [  restartedMain] o.e.j.s.Server                           : Started @2739ms
+2022-11-30 15:49:59.829 [ INFO] [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-30 15:49:59.866 [ INFO] [  restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-30 15:49:59.992 [ INFO] [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-30 15:50:00.086 [ INFO] [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-30 15:50:00.562 [ INFO] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-30 15:50:00.636 [ INFO] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-30 15:50:01.488 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-30 15:50:01.488 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-11-30 15:50:01.489 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2022-11-30 15:50:01.504 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@55071aad{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-11-30 15:50:01.573 [ INFO] [  restartedMain] o.e.j.s.Server                           : jetty-9.4.49.v20220914; built: 2022-09-14T01:07:36.601Z; git: 4231a3b2e4cb8548a412a789936d640a97b1aa0a; jvm 19+36-2238
+2022-11-30 15:50:01.577 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring embedded WebApplicationContext
+2022-11-30 15:50:01.581 [ INFO] [  restartedMain] o.e.j.s.session                          : DefaultSessionIdManager workerName=node0
+2022-11-30 15:50:01.582 [ INFO] [  restartedMain] o.e.j.s.session                          : No SessionScavenger set, using defaults
+2022-11-30 15:50:01.582 [ INFO] [  restartedMain] o.e.j.s.session                          : node0 Scavenging every 660000ms
+2022-11-30 15:50:01.582 [ INFO] [  restartedMain] o.e.j.s.h.ContextHandler                 : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@205e8b6c{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8081.14998839148453216252/],AVAILABLE}
+2022-11-30 15:50:01.583 [ INFO] [  restartedMain] o.e.j.s.Server                           : Started @4587ms
+2022-11-30 15:50:01.617 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-30 15:50:01.617 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-11-30 15:50:01.617 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
+2022-11-30 15:50:01.619 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@1110a11c{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2022-11-30 15:50:15.487 [ INFO] [ionShutdownHook] o.e.j.s.AbstractConnector                : Stopped ServerConnector@1110a11c{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2022-11-30 15:50:15.487 [ INFO] [ionShutdownHook] o.e.j.s.session                          : node0 Stopped scavenging
+2022-11-30 15:50:15.487 [ INFO] [ionShutdownHook] o.e.j.s.h.C.application                  : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-30 15:50:15.488 [ INFO] [ionShutdownHook] o.e.j.s.h.ContextHandler                 : Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@205e8b6c{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8081.14998839148453216252/],STOPPED}
+2022-11-30 15:50:15.491 [ INFO] [ionShutdownHook] o.e.j.s.AbstractConnector                : Stopped ServerConnector@55071aad{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-11-30 15:50:15.491 [ INFO] [ionShutdownHook] o.e.j.s.session                          : node0 Stopped scavenging
+2022-11-30 15:50:15.492 [ INFO] [ionShutdownHook] o.e.j.s.h.C.application                  : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-30 15:50:15.492 [ INFO] [ionShutdownHook] o.e.j.s.h.ContextHandler                 : Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@3cb2d523{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8080.672094265820111026/],STOPPED}
+2022-11-30 15:50:15.494 [ INFO] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-30 15:50:15.682 [ERROR] [onnection adder] c.z.h.p.HikariPool                       : HikariPool-1 - Error thrown while acquiring connection from data source
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: The database is open in exclusive mode; can not open additional connections [90135-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.engine.SessionLocal.checkSuspended(SessionLocal.java:1240)
+	at org.h2.engine.SessionLocal.transitionToState(SessionLocal.java:1232)
+	at org.h2.engine.SessionLocal.waitIfExclusiveModeEnabled(SessionLocal.java:1480)
+	at org.h2.command.Command.executeQuery(Command.java:180)
+	at org.h2.jdbc.JdbcConnection.isReadOnly(JdbcConnection.java:538)
+	at com.zaxxer.hikari.pool.PoolBase.setupConnection(PoolBase.java:408)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:726)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:712)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2022-11-30 15:50:15.884 [ WARN] [ionShutdownHook] o.s.b.f.s.DisposableBeanAdapter          : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2022-11-30 15:50:15.887 [ INFO] [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2022-11-30 15:50:15.935 [ INFO] [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2022-11-30 15:50:28.200 [ INFO] [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 6.2.5.Final
+2022-11-30 15:50:29.240 [ INFO] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-30 15:50:29.319 [ INFO] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 2 JPA repository interfaces.
+2022-11-30 15:50:29.728 [ INFO] [  restartedMain] o.e.j.u.log                              : Logging initialized @2934ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-11-30 15:50:29.948 [ INFO] [  restartedMain] o.e.j.s.Server                           : jetty-9.4.49.v20220914; built: 2022-09-14T01:07:36.601Z; git: 4231a3b2e4cb8548a412a789936d640a97b1aa0a; jvm 19+36-2238
+2022-11-30 15:50:29.973 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring embedded WebApplicationContext
+2022-11-30 15:50:30.100 [ INFO] [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-11-30 15:50:30.324 [ INFO] [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-11-30 15:50:30.421 [ INFO] [  restartedMain] o.e.j.s.session                          : DefaultSessionIdManager workerName=node0
+2022-11-30 15:50:30.421 [ INFO] [  restartedMain] o.e.j.s.session                          : No SessionScavenger set, using defaults
+2022-11-30 15:50:30.422 [ INFO] [  restartedMain] o.e.j.s.session                          : node0 Scavenging every 660000ms
+2022-11-30 15:50:30.432 [ INFO] [  restartedMain] o.e.j.s.h.ContextHandler                 : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@fba143e{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8080.16268857896570354083/],AVAILABLE}
+2022-11-30 15:50:30.432 [ INFO] [  restartedMain] o.e.j.s.Server                           : Started @3639ms
+2022-11-30 15:50:30.534 [ INFO] [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-30 15:50:30.579 [ INFO] [  restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-30 15:50:30.711 [ INFO] [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-30 15:50:30.813 [ INFO] [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-30 15:50:31.340 [ INFO] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-30 15:50:31.424 [ INFO] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-30 15:50:32.461 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-30 15:50:32.462 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-11-30 15:50:32.464 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2022-11-30 15:50:32.480 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@6cd7b6e1{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-11-30 15:50:32.559 [ INFO] [  restartedMain] o.e.j.s.Server                           : jetty-9.4.49.v20220914; built: 2022-09-14T01:07:36.601Z; git: 4231a3b2e4cb8548a412a789936d640a97b1aa0a; jvm 19+36-2238
+2022-11-30 15:50:32.561 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring embedded WebApplicationContext
+2022-11-30 15:50:32.565 [ INFO] [  restartedMain] o.e.j.s.session                          : DefaultSessionIdManager workerName=node0
+2022-11-30 15:50:32.565 [ INFO] [  restartedMain] o.e.j.s.session                          : No SessionScavenger set, using defaults
+2022-11-30 15:50:32.565 [ INFO] [  restartedMain] o.e.j.s.session                          : node0 Scavenging every 600000ms
+2022-11-30 15:50:32.566 [ INFO] [  restartedMain] o.e.j.s.h.ContextHandler                 : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@1d4cfcc3{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8081.919250803597969590/],AVAILABLE}
+2022-11-30 15:50:32.566 [ INFO] [  restartedMain] o.e.j.s.Server                           : Started @5773ms
+2022-11-30 15:50:32.606 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-30 15:50:32.607 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-11-30 15:50:32.607 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
+2022-11-30 15:50:32.608 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@23cbeeeb{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}

@@ -1,4 +1,4 @@
-<Configuration status="WARN">
+<Configuration status="INFO">
     <Properties>
         <Property name="LOG_PATTERN">
             %d{yyyy-MM-dd HH:mm:ss.SSS} [%5p] [%15.15t] %-40.40c{1.} : %m%n%ex
@@ -23,10 +23,10 @@
         </RollingFile>
     </Appenders>
     <Loggers>
-        <Logger name="com.manning.sbip" level="debug" additivity="false">
+        <Logger name="com.manning.sbip" level="info" additivity="false">
             <AppenderRef ref="FileAppender"/>
         </Logger>
-        <Logger name="com.manning.sbip" level="debug" additivity="false">
+        <Logger name="com.manning.sbip" level="info" additivity="false">
             <AppenderRef ref="ConsoleAppender"/>
         </Logger>
         <Logger name="org.springframework.boot" level="info" additivity="false">
