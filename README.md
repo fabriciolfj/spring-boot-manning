@@ -368,4 +368,38 @@ springBoot {
 - podemos também fornecedor informações a este endpoint de forma programática (similar ao health)
 - para isso devemos implementar a interface InfoContributor
 
-#### 4.6
+#### Metricas
+- o spring boot utiliza por tráz o micrometer para configurar as métricas
+- ele é uma fachada, onde podemos utilizar implementações para ferramentas específicas, afim de efetuar uma integração
+- exemplo de um endpoint:
+```
+http://localhost:8081/actuator/metrics
+http://localhost:8081/actuator/metrics/jvm.gc.pause
+```
+- podemos adicionar tags comuns, afim de identificar a origem dos dados mostrados nas metricas
+- por exemplo:
+```
+    @Bean
+    MeterRegistryCustomizer<MeterRegistry> metricsCommonTags() {
+        return registry -> registry.config().commonTags("app", "courses");
+    }
+    
+    http://localhost:8081/actuator/metrics/jvm.gc.pause?tag=app:courses
+```
+- spring boot permite criar métrica personalizadas
+- todas as metricas precisam ser catalogadas no MeterRegistry (um bean de exemplo abaixo)
+```
+    @Bean
+    public Gauge createCoursesGauge(final MeterRegistry meterRegistry, final CourseService service) {
+        return Gauge.builder("api.courses.created.gauge", service::count)
+                .description("Total de cursos disponiveis")
+                .register(meterRegistry);
+    }
+    
+    http://localhost:8081/actuator/metrics/api.courses.created.gauge
+```
+- temos alguns medidores como:
+  - counter -> um valor número que pode ser incrementado, desvangatem que não persisti o valor, no caso de reinicio da app, informação é perdida
+  - gauge -> medidor, podemos consultar a base de dados para expor alguma métrica, como: total de clientes criados
+  - timer -> uso para medicao do tempo gasto para criar um recurso ou busca de alguma informação
+  - distributionSummary -> resumo de dados a uma entidade, como: quantidade (count), soma de incidencias de uma valor(total), valor máximo fornecido (max)

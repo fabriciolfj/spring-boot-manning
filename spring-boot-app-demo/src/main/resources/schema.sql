@@ -1,5 +1,5 @@
 CREATE TABLE authors (
-  id   BIGINT NOT NULL,
+  id   BIGINT NOT NULL auto_increment,
   bio  VARCHAR(255),
   name VARCHAR(255),
   PRIMARY KEY (id)
@@ -12,7 +12,7 @@ CREATE TABLE authors_courses (
 );
 
 CREATE TABLE courses (
-  id          BIGINT NOT NULL,
+  id          BIGINT NOT NULL auto_increment,
   category    VARCHAR(255),
   description VARCHAR(255),
   name        VARCHAR(255),

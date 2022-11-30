@@ -1,6 +1,7 @@
 package com.manning.sbip.ch01.springbootappdemo.entity;
 
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
@@ -8,6 +9,8 @@ import javax.validation.constraints.Min;
 import java.util.HashSet;
 import java.util.Set;
 
+
+@ToString
 @Table(name = "COURSES")
 @Entity
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
