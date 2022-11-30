@@ -315,6 +315,7 @@ public class DogsApiHealthIndicator implements HealthIndicator {
 }
 ```
 - outro pronto e enriquecer o endpoint /info
+- obs: essa configuração será substituida pelos arquivos build-info e git.properties, caso estejam no classpath da aplicação
 ```
 management:
   info:
@@ -336,6 +337,24 @@ ou gradle
 springBoot {
   buildInfo()
 }
+```
+- fornecendo arquivos mencionados acima:
+```
+<plugin>
+				<groupId>com.mysema.maven</groupId>
+				<artifactId>apt-maven-plugin</artifactId>
+				<version>1.1.3</version>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>process</goal>
+						</goals>
+						
+			<plugin>
+				<groupId>pl.project13.maven</groupId>
+				<artifactId>git-commit-id-plugin</artifactId>
+			</plugin>
 ```
 - podemos também fornecedor informações a este endpoint de forma programática (similar ao health)
 - para isso devemos implementar a interface InfoContributor
