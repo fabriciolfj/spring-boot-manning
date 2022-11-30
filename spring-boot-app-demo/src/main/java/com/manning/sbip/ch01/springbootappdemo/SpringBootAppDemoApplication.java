@@ -8,6 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.actuate.health.Health;
+import org.springframework.boot.actuate.health.HealthIndicator;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -25,7 +27,7 @@ import java.util.Properties;
 @EnableConfigurationProperties(ApplicationProperties.class)
 @SpringBootApplication
 @ComponentScan
-public class SpringBootAppDemoApplication {
+public class SpringBootAppDemoApplication implements HealthIndicator {
 
 	private static final Logger LOG = LoggerFactory.getLogger(SpringBootAppDemoApplication.class);
 
@@ -77,5 +79,9 @@ public class SpringBootAppDemoApplication {
 			violations = validation.validate(user2);
 			violations.forEach(s -> LOG.error("User 2 não atendeu a validacao do password: {}", s.getMessage()));
 		};
+	}
+
+	public Health health() {
+		return Health.status("FATAL").build();
 	}
 }

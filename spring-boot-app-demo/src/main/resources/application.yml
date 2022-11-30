@@ -37,6 +37,42 @@ app:
         roles: USER,ADMIN
   timeout: ${APP_TIMEOUT:0}
 
+management:
+  server:
+    port: 8081
+  endpoint:
+    health:
+      status:
+        http-mapping:
+          down: 500
+          out_of_service: 503
+        order:
+          - FATAL
+          - DOWN
+          - OUT-OF-SERVICE
+          - UNKNOWN
+          - UP
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    env:
+      enabled: true
+
+info:
+  build:
+    artifact: @project.artifactId@
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+    properties.java.version: @java.version@
+  app:
+    name: Aplicativo de estudo
+    description: aplicativo feito para explorar os recursos do spring boot
+    version: 1.0
+
 #logging:
 #  file:
 #    console: clr(%d{dd-MM-yyyy HH:mm:ss.SSS}){yellow}%clr(${PID:- }){verde} %magenta([%thread]) %highlight([%-5level])%clr(%-40.40logger{39}){cyan} %msg%n

@@ -258,3 +258,86 @@ public interface CourseRepository extends PagingAndSortingRepository<Course, Lon
     matchIfMissing = se não for informado, valerá o valor true
 ```
 - podemos fazer uso dessas anotações em nível de class ou método
+
+#### Arquivo spring.factories
+- é um arquivo carregado pelo spring automaticamente, no momento da inicialização
+- nele encontra-se diversas configurações, entre elas configurações automáticas
+- a localização deste arquivo é: resources/META-INF
+
+#### Failure Analyzer
+- uma infraestrutura de análise de falhas oferecida pelo spring
+- executa validações para verificar se a aplicação está em funcionamento correto.
+- precisa estar registrado no spring.factories
+- Um exemplo de uma configuração:
+```
+public class UrlNotAccessibleFailureAnalyzer extends AbstractFailureAnalyzer<UrlNotAccessibleException> {
+
+    @Override
+    protected FailureAnalysis analyze(Throwable rootFailure, UrlNotAccessibleException cause) {
+        return new FailureAnalysis("Não foi possível acessar a url: " + cause.getUrl(),  "Valide a url e certifique-se de que esta acessivel", cause);
+    }
+}
+
+```
+- exemplo de um arquivo spring.factories, indicando a classe failure analyzer criada e a configuração necesária:
+```
+org.springframework.boot.diagnostics.FailureAnalyzer=\
+com.manning.sbip.ch01.springbootappdemo.exceptions.failureanalyzer.UrlNotAccessibleFailureAnalyzer
+```
+- obs: caso tenha mais de um failure analyzer, separe por vingula
+
+#### Spring actuator
+- expõe via apis, métricas da sua aplicação
+- podemos personalizar algumas métricas/observabilidades
+- abaixo um exemplo onde no endpoint /health, será incluso o health customizavel (verifica uma api externa, antes de decidir de o microservice está pronto)
+- obs: precisamos implementar a interface HealthIndicator e seguir a convenção NomeHealthIndicator
+```
+@Component
+public class DogsApiHealthIndicator implements HealthIndicator {
+
+    @Override
+    public Health health() {
+        try {
+            ParameterizedTypeReference<Map<String, String>> ref = new ParameterizedTypeReference<>() {
+            };
+            ResponseEntity<Map<String, String>> result =
+                    new RestTemplate().exchange("https://dog.ceo/api/breeds/image/random", HttpMethod.GET, null, ref);
+
+            if (result.getStatusCode().is2xxSuccessful() && result.getBody() != null) {
+                return Health.up().withDetails(result.getBody()).build();
+            }
+
+            return Health.down().withDetail("status", result.getStatusCode()).build();
+        } catch (RestClientException e) {
+            return Health.down().withException(e).build();
+        }
+    }
+}
+```
+- outro pronto e enriquecer o endpoint /info
+```
+management:
+  info:
+    env:
+      enabled: true
+
+info:
+  build:
+    artifact: @project.artifactId@
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+    properties.java.version: @java.version@
+  app:
+    name: Aplicativo de estudo
+    description: aplicativo feito para explorar os recursos do spring boot
+    version: 1.0
+ou gradle
+springBoot {
+  buildInfo()
+}
+```
+- podemos também fornecedor informações a este endpoint de forma programática (similar ao health)
+- para isso devemos implementar a interface InfoContributor
+
+#### 4.6
