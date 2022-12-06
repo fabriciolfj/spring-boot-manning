@@ -403,3 +403,19 @@ http://localhost:8081/actuator/metrics/jvm.gc.pause
   - gauge -> medidor, podemos consultar a base de dados para expor alguma métrica, como: total de clientes criados
   - timer -> uso para medicao do tempo gasto para criar um recurso ou busca de alguma informação
   - distributionSummary -> resumo de dados a uma entidade, como: quantidade (count), soma de incidencias de uma valor(total), valor máximo fornecido (max)
+
+#### Spring security
+- obriga os usuários a se autenticarem antes de fazer uso dos endpoints expostos
+- ofecere por padrão segurança contra falsificação de autenticação (csrf)
+  - ele envia um token no cabeçalho do respose (após autenticação)
+  - o exigi na próxima requisição ao recurso
+
+##### Funcionamento
+- dispatcher servlet manipula as solicitações (um app simples do spring mvc)
+- spring security utiliza filtros antes do servlets (DispatcherServlet), para interceptar as requisições
+- esses filtros são registrados no container do servlet para executar tal papel
+- para esses filtros serem registrados, eles implementam a interface Filter, que possui 3 métodos:
+  - init -> invocado pelo contêiner da web, para indicar a um filtro está sendo colocado em serviço
+  - destroy -> é chamado quando tira o filtro de serviço
+  - doFilter -> onde a ação real do filtro e feita (a lógica) e o próximo filtro e chamado (via filter chain) ou não
+- 5.2.4

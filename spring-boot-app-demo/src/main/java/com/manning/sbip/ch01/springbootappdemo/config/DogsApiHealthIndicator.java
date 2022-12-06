@@ -20,7 +20,7 @@ public class DogsApiHealthIndicator implements HealthIndicator {
             ParameterizedTypeReference<Map<String, String>> ref = new ParameterizedTypeReference<>() {
             };
             ResponseEntity<Map<String, String>> result =
-                    new RestTemplate().exchange("https://dog.ceo/api/breeds/image/random", HttpMethod.GET, null, ref);
+                    new RestTemplate().exchange("https://dog.ceo/api/breeds/image/randomx", HttpMethod.GET, null, ref);
 
             if (result.getStatusCode().is2xxSuccessful() && result.getBody() != null) {
                 return Health.up().withDetails(result.getBody()).build();

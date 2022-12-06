@@ -101,3 +101,611 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: The database is open in excl
 2022-11-30 15:50:32.607 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
 2022-11-30 15:50:32.607 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
 2022-11-30 15:50:32.608 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@23cbeeeb{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2022-11-30 15:51:38.274 [ INFO] [ionShutdownHook] o.e.j.s.AbstractConnector                : Stopped ServerConnector@23cbeeeb{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2022-11-30 15:51:38.274 [ INFO] [ionShutdownHook] o.e.j.s.session                          : node0 Stopped scavenging
+2022-11-30 15:51:38.275 [ INFO] [ionShutdownHook] o.e.j.s.h.C.application                  : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-30 15:51:38.275 [ INFO] [ionShutdownHook] o.e.j.s.h.ContextHandler                 : Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@1d4cfcc3{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8081.919250803597969590/],STOPPED}
+2022-11-30 15:51:38.279 [ INFO] [ionShutdownHook] o.e.j.s.AbstractConnector                : Stopped ServerConnector@6cd7b6e1{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-11-30 15:51:38.279 [ INFO] [ionShutdownHook] o.e.j.s.session                          : node0 Stopped scavenging
+2022-11-30 15:51:38.280 [ INFO] [ionShutdownHook] o.e.j.s.h.C.application                  : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-30 15:51:38.280 [ INFO] [ionShutdownHook] o.e.j.s.h.ContextHandler                 : Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@fba143e{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8080.16268857896570354083/],STOPPED}
+2022-11-30 15:51:38.283 [ INFO] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-30 15:51:38.671 [ WARN] [ionShutdownHook] o.s.b.f.s.DisposableBeanAdapter          : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2022-11-30 15:51:38.673 [ INFO] [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2022-11-30 15:51:38.722 [ INFO] [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2022-12-02 16:26:41.127 [ INFO] [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 6.2.5.Final
+2022-12-02 16:26:42.068 [ INFO] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-02 16:26:42.127 [ INFO] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
+2022-12-02 16:26:42.501 [ INFO] [  restartedMain] o.e.j.u.log                              : Logging initialized @2854ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-12-02 16:26:42.733 [ INFO] [  restartedMain] o.e.j.s.Server                           : jetty-9.4.49.v20220914; built: 2022-09-14T01:07:36.601Z; git: 4231a3b2e4cb8548a412a789936d640a97b1aa0a; jvm 19+36-2238
+2022-12-02 16:26:42.758 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring embedded WebApplicationContext
+2022-12-02 16:26:42.901 [ INFO] [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-12-02 16:26:43.122 [ INFO] [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-12-02 16:26:43.213 [ INFO] [  restartedMain] o.e.j.s.session                          : DefaultSessionIdManager workerName=node0
+2022-12-02 16:26:43.213 [ INFO] [  restartedMain] o.e.j.s.session                          : No SessionScavenger set, using defaults
+2022-12-02 16:26:43.214 [ INFO] [  restartedMain] o.e.j.s.session                          : node0 Scavenging every 660000ms
+2022-12-02 16:26:43.223 [ INFO] [  restartedMain] o.e.j.s.h.ContextHandler                 : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@3ad5b86a{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8080.16688307117602415531/],AVAILABLE}
+2022-12-02 16:26:43.223 [ INFO] [  restartedMain] o.e.j.s.Server                           : Started @3577ms
+2022-12-02 16:26:43.335 [ INFO] [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-02 16:26:43.399 [ INFO] [  restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-12-02 16:26:43.566 [ INFO] [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-02 16:26:43.689 [ INFO] [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-02 16:26:44.284 [ INFO] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-02 16:26:44.385 [ INFO] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-02 16:26:45.337 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-02 16:26:45.337 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-12-02 16:26:45.338 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2022-12-02 16:26:45.354 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@748cd0e5{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-12-02 16:26:45.432 [ INFO] [  restartedMain] o.e.j.s.Server                           : jetty-9.4.49.v20220914; built: 2022-09-14T01:07:36.601Z; git: 4231a3b2e4cb8548a412a789936d640a97b1aa0a; jvm 19+36-2238
+2022-12-02 16:26:45.434 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring embedded WebApplicationContext
+2022-12-02 16:26:45.437 [ INFO] [  restartedMain] o.e.j.s.session                          : DefaultSessionIdManager workerName=node0
+2022-12-02 16:26:45.437 [ INFO] [  restartedMain] o.e.j.s.session                          : No SessionScavenger set, using defaults
+2022-12-02 16:26:45.438 [ INFO] [  restartedMain] o.e.j.s.session                          : node0 Scavenging every 660000ms
+2022-12-02 16:26:45.438 [ INFO] [  restartedMain] o.e.j.s.h.ContextHandler                 : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@54b5188c{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8081.11378584353218096435/],AVAILABLE}
+2022-12-02 16:26:45.438 [ INFO] [  restartedMain] o.e.j.s.Server                           : Started @5792ms
+2022-12-02 16:26:45.481 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-02 16:26:45.481 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-12-02 16:26:45.481 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
+2022-12-02 16:26:45.482 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@2c08e66{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2022-12-02 16:27:07.801 [ INFO] [ionShutdownHook] o.e.j.s.AbstractConnector                : Stopped ServerConnector@2c08e66{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2022-12-02 16:27:07.801 [ INFO] [ionShutdownHook] o.e.j.s.session                          : node0 Stopped scavenging
+2022-12-02 16:27:07.802 [ INFO] [ionShutdownHook] o.e.j.s.h.C.application                  : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-02 16:27:07.803 [ INFO] [ionShutdownHook] o.e.j.s.h.ContextHandler                 : Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@54b5188c{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8081.11378584353218096435/],STOPPED}
+2022-12-02 16:27:07.808 [ INFO] [ionShutdownHook] o.e.j.s.AbstractConnector                : Stopped ServerConnector@748cd0e5{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-12-02 16:27:07.809 [ INFO] [ionShutdownHook] o.e.j.s.session                          : node0 Stopped scavenging
+2022-12-02 16:27:07.809 [ INFO] [ionShutdownHook] o.e.j.s.h.C.application                  : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-02 16:27:07.810 [ INFO] [ionShutdownHook] o.e.j.s.h.ContextHandler                 : Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@3ad5b86a{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8080.16688307117602415531/],STOPPED}
+2022-12-02 16:27:07.812 [ INFO] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-02 16:56:56.978 [ INFO] [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 6.2.5.Final
+2022-12-02 16:56:57.880 [ INFO] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-02 16:56:57.934 [ INFO] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
+2022-12-02 16:56:58.277 [ INFO] [  restartedMain] o.e.j.u.log                              : Logging initialized @2532ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-12-02 16:56:58.485 [ INFO] [  restartedMain] o.e.j.s.Server                           : jetty-9.4.49.v20220914; built: 2022-09-14T01:07:36.601Z; git: 4231a3b2e4cb8548a412a789936d640a97b1aa0a; jvm 19+36-2238
+2022-12-02 16:56:58.509 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring embedded WebApplicationContext
+2022-12-02 16:56:58.624 [ INFO] [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-12-02 16:56:58.824 [ INFO] [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-12-02 16:56:58.903 [ INFO] [  restartedMain] o.e.j.s.session                          : DefaultSessionIdManager workerName=node0
+2022-12-02 16:56:58.903 [ INFO] [  restartedMain] o.e.j.s.session                          : No SessionScavenger set, using defaults
+2022-12-02 16:56:58.904 [ INFO] [  restartedMain] o.e.j.s.session                          : node0 Scavenging every 660000ms
+2022-12-02 16:56:58.913 [ INFO] [  restartedMain] o.e.j.s.h.ContextHandler                 : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@3ad5b86a{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8080.17689122597811984616/],AVAILABLE}
+2022-12-02 16:56:58.913 [ INFO] [  restartedMain] o.e.j.s.Server                           : Started @3169ms
+2022-12-02 16:56:59.018 [ INFO] [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-02 16:56:59.072 [ INFO] [  restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-12-02 16:56:59.223 [ INFO] [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-02 16:56:59.340 [ INFO] [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-02 16:56:59.859 [ INFO] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-02 16:56:59.944 [ INFO] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-02 16:57:00.811 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-02 16:57:00.812 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-12-02 16:57:00.813 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2022-12-02 16:57:00.828 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@748cd0e5{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-12-02 16:57:00.897 [ INFO] [  restartedMain] o.e.j.s.Server                           : jetty-9.4.49.v20220914; built: 2022-09-14T01:07:36.601Z; git: 4231a3b2e4cb8548a412a789936d640a97b1aa0a; jvm 19+36-2238
+2022-12-02 16:57:00.898 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring embedded WebApplicationContext
+2022-12-02 16:57:00.902 [ INFO] [  restartedMain] o.e.j.s.session                          : DefaultSessionIdManager workerName=node0
+2022-12-02 16:57:00.902 [ INFO] [  restartedMain] o.e.j.s.session                          : No SessionScavenger set, using defaults
+2022-12-02 16:57:00.902 [ INFO] [  restartedMain] o.e.j.s.session                          : node0 Scavenging every 660000ms
+2022-12-02 16:57:00.903 [ INFO] [  restartedMain] o.e.j.s.h.ContextHandler                 : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@60af524d{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8081.14672147730876370484/],AVAILABLE}
+2022-12-02 16:57:00.903 [ INFO] [  restartedMain] o.e.j.s.Server                           : Started @5159ms
+2022-12-02 16:57:00.941 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-02 16:57:00.941 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-12-02 16:57:00.942 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2022-12-02 16:57:00.943 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@52e9765e{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2022-12-02 16:58:01.412 [ INFO] [ionShutdownHook] o.e.j.s.AbstractConnector                : Stopped ServerConnector@52e9765e{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2022-12-02 16:58:01.413 [ INFO] [ionShutdownHook] o.e.j.s.session                          : node0 Stopped scavenging
+2022-12-02 16:58:01.414 [ INFO] [ionShutdownHook] o.e.j.s.h.C.application                  : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-02 16:58:01.414 [ INFO] [ionShutdownHook] o.e.j.s.h.ContextHandler                 : Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@60af524d{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8081.14672147730876370484/],STOPPED}
+2022-12-02 16:58:01.420 [ INFO] [ionShutdownHook] o.e.j.s.AbstractConnector                : Stopped ServerConnector@748cd0e5{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-12-02 16:58:01.420 [ INFO] [ionShutdownHook] o.e.j.s.session                          : node0 Stopped scavenging
+2022-12-02 16:58:01.421 [ INFO] [ionShutdownHook] o.e.j.s.h.C.application                  : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-02 16:58:01.421 [ INFO] [ionShutdownHook] o.e.j.s.h.ContextHandler                 : Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@3ad5b86a{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8080.17689122597811984616/],STOPPED}
+2022-12-02 16:58:01.424 [ INFO] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-02 16:58:07.309 [ INFO] [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 6.2.5.Final
+2022-12-02 16:58:08.157 [ INFO] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-02 16:58:08.207 [ INFO] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+2022-12-02 16:58:08.537 [ INFO] [  restartedMain] o.e.j.u.log                              : Logging initialized @2348ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-12-02 16:58:08.735 [ INFO] [  restartedMain] o.e.j.s.Server                           : jetty-9.4.49.v20220914; built: 2022-09-14T01:07:36.601Z; git: 4231a3b2e4cb8548a412a789936d640a97b1aa0a; jvm 19+36-2238
+2022-12-02 16:58:08.759 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring embedded WebApplicationContext
+2022-12-02 16:58:08.875 [ INFO] [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-12-02 16:58:09.053 [ INFO] [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-12-02 16:58:09.129 [ INFO] [  restartedMain] o.e.j.s.session                          : DefaultSessionIdManager workerName=node0
+2022-12-02 16:58:09.129 [ INFO] [  restartedMain] o.e.j.s.session                          : No SessionScavenger set, using defaults
+2022-12-02 16:58:09.130 [ INFO] [  restartedMain] o.e.j.s.session                          : node0 Scavenging every 660000ms
+2022-12-02 16:58:09.139 [ INFO] [  restartedMain] o.e.j.s.h.ContextHandler                 : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@43345525{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8080.15495935315233756724/],AVAILABLE}
+2022-12-02 16:58:09.139 [ INFO] [  restartedMain] o.e.j.s.Server                           : Started @2951ms
+2022-12-02 16:58:09.236 [ INFO] [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-02 16:58:09.283 [ INFO] [  restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-12-02 16:58:09.426 [ INFO] [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-02 16:58:09.533 [ INFO] [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-02 16:58:10.031 [ INFO] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-02 16:58:10.150 [ INFO] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-02 16:58:11.403 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-02 16:58:11.403 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-12-02 16:58:11.406 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 3 ms
+2022-12-02 16:58:11.424 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@55ad7e6b{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-12-02 16:58:11.510 [ INFO] [  restartedMain] o.e.j.s.Server                           : jetty-9.4.49.v20220914; built: 2022-09-14T01:07:36.601Z; git: 4231a3b2e4cb8548a412a789936d640a97b1aa0a; jvm 19+36-2238
+2022-12-02 16:58:11.511 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring embedded WebApplicationContext
+2022-12-02 16:58:11.517 [ INFO] [  restartedMain] o.e.j.s.session                          : DefaultSessionIdManager workerName=node0
+2022-12-02 16:58:11.517 [ INFO] [  restartedMain] o.e.j.s.session                          : No SessionScavenger set, using defaults
+2022-12-02 16:58:11.518 [ INFO] [  restartedMain] o.e.j.s.session                          : node0 Scavenging every 660000ms
+2022-12-02 16:58:11.518 [ INFO] [  restartedMain] o.e.j.s.h.ContextHandler                 : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@6bf5f92d{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8081.8811516129278989563/],AVAILABLE}
+2022-12-02 16:58:11.519 [ INFO] [  restartedMain] o.e.j.s.Server                           : Started @5331ms
+2022-12-02 16:58:11.568 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-02 16:58:11.568 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-12-02 16:58:11.569 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2022-12-02 16:58:11.570 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@2fb637ad{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2022-12-02 16:58:11.918 [ WARN] [tp1669883076-84] o.e.j.s.HttpChannel                      : /actuator/health
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.IllegalArgumentException: Expected scheme-specific part at index 6: https:
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:497)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:554)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:181)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: java.lang.IllegalArgumentException: Expected scheme-specific part at index 6: https:
+	at java.base/java.net.URI.create(URI.java:903)
+	at org.springframework.web.util.DefaultUriBuilderFactory$DefaultUriBuilder.createUri(DefaultUriBuilderFactory.java:411)
+	at org.springframework.web.util.DefaultUriBuilderFactory$DefaultUriBuilder.build(DefaultUriBuilderFactory.java:404)
+	at org.springframework.web.util.DefaultUriBuilderFactory.expand(DefaultUriBuilderFactory.java:154)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:631)
+	at com.manning.sbip.ch01.springbootappdemo.config.DogsApiHealthIndicator.health(DogsApiHealthIndicator.java:23)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:104)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:46)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:90)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:79)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:353)
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:458)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.boot.actuate.autoconfigure.web.servlet.CompositeHandlerAdapter.handle(CompositeHandlerAdapter.java:58)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	... 32 more
+Caused by: java.net.URISyntaxException: Expected scheme-specific part at index 6: https:
+	at java.base/java.net.URI$Parser.fail(URI.java:2970)
+	at java.base/java.net.URI$Parser.failExpecting(URI.java:2976)
+	at java.base/java.net.URI$Parser.parse(URI.java:3176)
+	at java.base/java.net.URI.<init>(URI.java:620)
+	at java.base/java.net.URI.create(URI.java:901)
+	... 68 more
+2022-12-02 16:58:12.612 [ WARN] [tp1669883076-72] o.e.j.s.HttpChannel                      : /actuator/health
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.IllegalArgumentException: Expected scheme-specific part at index 6: https:
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:497)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:554)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:181)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:137)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: java.lang.IllegalArgumentException: Expected scheme-specific part at index 6: https:
+	at java.base/java.net.URI.create(URI.java:903)
+	at org.springframework.web.util.DefaultUriBuilderFactory$DefaultUriBuilder.createUri(DefaultUriBuilderFactory.java:411)
+	at org.springframework.web.util.DefaultUriBuilderFactory$DefaultUriBuilder.build(DefaultUriBuilderFactory.java:404)
+	at org.springframework.web.util.DefaultUriBuilderFactory.expand(DefaultUriBuilderFactory.java:154)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:631)
+	at com.manning.sbip.ch01.springbootappdemo.config.DogsApiHealthIndicator.health(DogsApiHealthIndicator.java:23)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:104)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:46)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:90)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:79)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:353)
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:458)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.boot.actuate.autoconfigure.web.servlet.CompositeHandlerAdapter.handle(CompositeHandlerAdapter.java:58)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	... 36 more
+Caused by: java.net.URISyntaxException: Expected scheme-specific part at index 6: https:
+	at java.base/java.net.URI$Parser.fail(URI.java:2970)
+	at java.base/java.net.URI$Parser.failExpecting(URI.java:2976)
+	at java.base/java.net.URI$Parser.parse(URI.java:3176)
+	at java.base/java.net.URI.<init>(URI.java:620)
+	at java.base/java.net.URI.create(URI.java:901)
+	... 72 more
+2022-12-02 16:58:15.270 [ WARN] [tp1669883076-73] o.e.j.s.HttpChannel                      : /actuator/health
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.IllegalArgumentException: Expected scheme-specific part at index 6: https:
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:497)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:554)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:181)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:137)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: java.lang.IllegalArgumentException: Expected scheme-specific part at index 6: https:
+	at java.base/java.net.URI.create(URI.java:903)
+	at org.springframework.web.util.DefaultUriBuilderFactory$DefaultUriBuilder.createUri(DefaultUriBuilderFactory.java:411)
+	at org.springframework.web.util.DefaultUriBuilderFactory$DefaultUriBuilder.build(DefaultUriBuilderFactory.java:404)
+	at org.springframework.web.util.DefaultUriBuilderFactory.expand(DefaultUriBuilderFactory.java:154)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:631)
+	at com.manning.sbip.ch01.springbootappdemo.config.DogsApiHealthIndicator.health(DogsApiHealthIndicator.java:23)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:104)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:46)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:90)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:79)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:353)
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:458)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.boot.actuate.autoconfigure.web.servlet.CompositeHandlerAdapter.handle(CompositeHandlerAdapter.java:58)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	... 36 more
+Caused by: java.net.URISyntaxException: Expected scheme-specific part at index 6: https:
+	at java.base/java.net.URI$Parser.fail(URI.java:2970)
+	at java.base/java.net.URI$Parser.failExpecting(URI.java:2976)
+	at java.base/java.net.URI$Parser.parse(URI.java:3176)
+	at java.base/java.net.URI.<init>(URI.java:620)
+	at java.base/java.net.URI.create(URI.java:901)
+	... 72 more
+2022-12-02 16:58:23.387 [ INFO] [ionShutdownHook] o.e.j.s.AbstractConnector                : Stopped ServerConnector@2fb637ad{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2022-12-02 16:58:23.387 [ INFO] [ionShutdownHook] o.e.j.s.session                          : node0 Stopped scavenging
+2022-12-02 16:58:23.388 [ INFO] [ionShutdownHook] o.e.j.s.h.C.application                  : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-02 16:58:23.388 [ INFO] [ionShutdownHook] o.e.j.s.h.ContextHandler                 : Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@6bf5f92d{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8081.8811516129278989563/],STOPPED}
+2022-12-02 16:58:23.391 [ INFO] [ionShutdownHook] o.e.j.s.AbstractConnector                : Stopped ServerConnector@55ad7e6b{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-12-02 16:58:23.392 [ INFO] [ionShutdownHook] o.e.j.s.session                          : node0 Stopped scavenging
+2022-12-02 16:58:23.392 [ INFO] [ionShutdownHook] o.e.j.s.h.C.application                  : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-02 16:58:23.392 [ INFO] [ionShutdownHook] o.e.j.s.h.ContextHandler                 : Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@43345525{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8080.15495935315233756724/],STOPPED}
+2022-12-02 16:58:23.393 [ WARN] [ionShutdownHook] o.e.j.u.t.QueuedThreadPool               : Stopped without executing or closing null
+2022-12-02 16:58:23.395 [ INFO] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-02 16:58:27.459 [ INFO] [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 6.2.5.Final
+2022-12-02 16:58:28.408 [ INFO] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-02 16:58:28.504 [ INFO] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 2 JPA repository interfaces.
+2022-12-02 16:58:28.911 [ INFO] [  restartedMain] o.e.j.u.log                              : Logging initialized @2618ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-12-02 16:58:29.173 [ INFO] [  restartedMain] o.e.j.s.Server                           : jetty-9.4.49.v20220914; built: 2022-09-14T01:07:36.601Z; git: 4231a3b2e4cb8548a412a789936d640a97b1aa0a; jvm 19+36-2238
+2022-12-02 16:58:29.201 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring embedded WebApplicationContext
+2022-12-02 16:58:29.338 [ INFO] [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-12-02 16:58:29.568 [ INFO] [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-12-02 16:58:29.656 [ INFO] [  restartedMain] o.e.j.s.session                          : DefaultSessionIdManager workerName=node0
+2022-12-02 16:58:29.656 [ INFO] [  restartedMain] o.e.j.s.session                          : No SessionScavenger set, using defaults
+2022-12-02 16:58:29.657 [ INFO] [  restartedMain] o.e.j.s.session                          : node0 Scavenging every 600000ms
+2022-12-02 16:58:29.666 [ INFO] [  restartedMain] o.e.j.s.h.ContextHandler                 : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@2fcfc7c5{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8080.3315839079804763667/],AVAILABLE}
+2022-12-02 16:58:29.667 [ INFO] [  restartedMain] o.e.j.s.Server                           : Started @3375ms
+2022-12-02 16:58:29.770 [ INFO] [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-02 16:58:29.823 [ INFO] [  restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-12-02 16:58:29.989 [ INFO] [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-02 16:58:30.104 [ INFO] [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-02 16:58:30.658 [ INFO] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-02 16:58:30.745 [ INFO] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-02 16:58:31.712 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-02 16:58:31.712 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-12-02 16:58:31.714 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2022-12-02 16:58:31.729 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@7dd3f7dd{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-12-02 16:58:31.801 [ INFO] [  restartedMain] o.e.j.s.Server                           : jetty-9.4.49.v20220914; built: 2022-09-14T01:07:36.601Z; git: 4231a3b2e4cb8548a412a789936d640a97b1aa0a; jvm 19+36-2238
+2022-12-02 16:58:31.802 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring embedded WebApplicationContext
+2022-12-02 16:58:31.807 [ INFO] [  restartedMain] o.e.j.s.session                          : DefaultSessionIdManager workerName=node0
+2022-12-02 16:58:31.807 [ INFO] [  restartedMain] o.e.j.s.session                          : No SessionScavenger set, using defaults
+2022-12-02 16:58:31.807 [ INFO] [  restartedMain] o.e.j.s.session                          : node0 Scavenging every 600000ms
+2022-12-02 16:58:31.808 [ INFO] [  restartedMain] o.e.j.s.h.ContextHandler                 : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@76312076{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8081.4471178853613654727/],AVAILABLE}
+2022-12-02 16:58:31.808 [ INFO] [  restartedMain] o.e.j.s.Server                           : Started @5516ms
+2022-12-02 16:58:31.845 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-02 16:58:31.845 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-12-02 16:58:31.846 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
+2022-12-02 16:58:31.847 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@5d7fe1e{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2022-12-02 17:47:51.787 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m21s659ms).
+2022-12-02 20:01:16.156 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m23s527ms).
+2022-12-02 21:06:16.575 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s830ms), soft-evicting connections from pool.
+2022-12-03 12:51:53.096 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m30s584ms).
+2022-12-03 14:19:14.429 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m20s863ms).
+2022-12-03 14:37:28.860 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m44s367ms).
+2022-12-03 14:59:13.940 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m5s246ms).
+2022-12-03 15:24:49.852 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m5s932ms).
+2022-12-03 15:37:41.895 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m22s36ms).
+2022-12-03 15:54:45.763 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m3s868ms).
+2022-12-03 16:22:56.504 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m10s681ms).
+2022-12-03 16:44:43.166 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=21m16s645ms).
+2022-12-03 16:48:39.582 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s371ms).
+2022-12-03 18:06:01.118 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m21s301ms).
+2022-12-03 18:24:24.928 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m53s838ms).
+2022-12-03 18:40:40.783 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m45s851ms).
+2022-12-03 18:53:50.171 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m9s329ms).
+2022-12-03 19:09:24.746 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m34s576ms).
+2022-12-03 20:10:17.638 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h22s877ms).
+2022-12-03 20:29:25.362 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m7s677ms).
+2022-12-03 20:46:41.436 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m16s74ms).
+2022-12-03 21:14:47.720 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m36s266ms).
+2022-12-03 21:45:47.842 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s868ms), soft-evicting connections from pool.
+2022-12-03 22:54:01.010 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22m42s493ms).
+2022-12-03 23:11:20.908 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m49s880ms).
+2022-12-03 23:29:32.744 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m11s836ms).
+2022-12-03 23:51:48.625 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m15s846ms).
+2022-12-04 00:08:08.938 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m50s304ms).
+2022-12-04 00:23:04.482 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m55s509ms).
+2022-12-04 00:39:46.891 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m12s399ms).
+2022-12-04 01:40:42.577 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h25s683ms).
+2022-12-04 02:30:58.147 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50m15s570ms).
+2022-12-04 03:34:24.612 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h26s389ms).
+2022-12-04 04:01:41.148 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m46s508ms).
+2022-12-04 05:02:37.251 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h26s107ms).
+2022-12-04 05:18:01.133 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m23s882ms).
+2022-12-04 06:20:58.923 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h27s735ms).
+2022-12-04 07:06:47.996 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45m18s661ms).
+2022-12-04 08:07:43.630 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h25s626ms).
+2022-12-04 09:10:35.935 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h22s287ms).
+2022-12-04 09:39:04.123 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=28m28s189ms).
+2022-12-04 09:57:21.871 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m47s532ms).
+2022-12-04 10:14:25.295 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m3s388ms).
+2022-12-04 10:30:27.143 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m31s837ms).
+2022-12-04 11:30:52.820 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h25s677ms).
+2022-12-04 11:53:23.412 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m483ms).
+2022-12-04 12:04:58.088 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m34s578ms).
+2022-12-04 12:06:25.941 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m27s854ms).
+2022-12-04 12:08:23.802 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m27s854ms).
+2022-12-04 12:10:21.675 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m27s867ms).
+2022-12-04 12:11:51.463 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m29s788ms).
+2022-12-04 12:13:49.660 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m27s833ms).
+2022-12-04 12:15:47.502 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m27s834ms).
+2022-12-04 12:17:45.342 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m27s831ms).
+2022-12-04 12:19:13.184 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m27s841ms).
+2022-12-04 12:21:11.055 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m27s830ms).
+2022-12-04 12:23:08.941 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m27s858ms).
+2022-12-04 12:25:06.801 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m27s841ms).
+2022-12-04 12:26:34.655 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m27s854ms).
+2022-12-04 13:28:31.207 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m26s12ms).
+2022-12-04 13:59:04.439 [ INFO] [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 6.2.5.Final
+2022-12-04 13:59:05.573 [ INFO] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-04 13:59:05.630 [ INFO] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
+2022-12-04 13:59:06.374 [ INFO] [  restartedMain] o.e.j.u.log                              : Logging initialized @4108ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-12-04 13:59:06.774 [ INFO] [  restartedMain] o.e.j.s.Server                           : jetty-9.4.49.v20220914; built: 2022-09-14T01:07:36.601Z; git: 4231a3b2e4cb8548a412a789936d640a97b1aa0a; jvm 19+36-2238
+2022-12-04 13:59:06.836 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring embedded WebApplicationContext
+2022-12-04 13:59:06.982 [ INFO] [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-12-04 13:59:07.386 [ INFO] [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-12-04 13:59:07.587 [ INFO] [  restartedMain] o.e.j.s.session                          : DefaultSessionIdManager workerName=node0
+2022-12-04 13:59:07.587 [ INFO] [  restartedMain] o.e.j.s.session                          : No SessionScavenger set, using defaults
+2022-12-04 13:59:07.589 [ INFO] [  restartedMain] o.e.j.s.session                          : node0 Scavenging every 600000ms
+2022-12-04 13:59:07.621 [ INFO] [  restartedMain] o.e.j.s.h.ContextHandler                 : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@3fe28b49{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8080.12741736106226130898/],AVAILABLE}
+2022-12-04 13:59:07.623 [ INFO] [  restartedMain] o.e.j.s.Server                           : Started @5359ms
+2022-12-04 13:59:07.925 [ INFO] [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-04 13:59:08.038 [ INFO] [  restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-12-04 13:59:08.307 [ INFO] [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-04 13:59:08.504 [ INFO] [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-04 13:59:09.242 [ INFO] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-04 13:59:09.322 [ INFO] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-04 13:59:10.665 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-04 13:59:10.665 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-12-04 13:59:10.666 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2022-12-04 13:59:10.682 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@34934203{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-12-04 13:59:10.853 [ INFO] [  restartedMain] o.e.j.s.Server                           : jetty-9.4.49.v20220914; built: 2022-09-14T01:07:36.601Z; git: 4231a3b2e4cb8548a412a789936d640a97b1aa0a; jvm 19+36-2238
+2022-12-04 13:59:10.855 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring embedded WebApplicationContext
+2022-12-04 13:59:10.864 [ INFO] [  restartedMain] o.e.j.s.session                          : DefaultSessionIdManager workerName=node0
+2022-12-04 13:59:10.865 [ INFO] [  restartedMain] o.e.j.s.session                          : No SessionScavenger set, using defaults
+2022-12-04 13:59:10.865 [ INFO] [  restartedMain] o.e.j.s.session                          : node0 Scavenging every 600000ms
+2022-12-04 13:59:10.866 [ INFO] [  restartedMain] o.e.j.s.h.ContextHandler                 : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@4d7fff42{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8081.11334405974543460314/],AVAILABLE}
+2022-12-04 13:59:10.867 [ INFO] [  restartedMain] o.e.j.s.Server                           : Started @8603ms
+2022-12-04 13:59:10.939 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-04 13:59:10.939 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-12-04 13:59:10.940 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2022-12-04 13:59:10.942 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@4ec4e1ac{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2022-12-04 14:38:59.648 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m51s623ms).
+2022-12-04 14:53:01.906 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m2s107ms).
+2022-12-04 15:19:53.725 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m51s773ms).
+2022-12-04 15:36:35.168 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m11s437ms).
+2022-12-04 15:44:04.712 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m59s507ms).
+2022-12-04 15:57:14.294 [ WARN] [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m39s579ms).
+2022-12-04 16:10:12.537 [ INFO] [ionShutdownHook] o.e.j.s.AbstractConnector                : Stopped ServerConnector@4ec4e1ac{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2022-12-04 16:10:12.538 [ INFO] [ionShutdownHook] o.e.j.s.session                          : node0 Stopped scavenging
+2022-12-04 16:10:12.543 [ INFO] [ionShutdownHook] o.e.j.s.h.C.application                  : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-04 16:10:12.549 [ INFO] [ionShutdownHook] o.e.j.s.h.ContextHandler                 : Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@4d7fff42{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8081.11334405974543460314/],STOPPED}
+2022-12-04 16:10:12.590 [ INFO] [ionShutdownHook] o.e.j.s.AbstractConnector                : Stopped ServerConnector@34934203{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-12-04 16:10:12.591 [ INFO] [ionShutdownHook] o.e.j.s.session                          : node0 Stopped scavenging
+2022-12-04 16:10:12.594 [ INFO] [ionShutdownHook] o.e.j.s.h.C.application                  : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-04 16:10:12.594 [ INFO] [ionShutdownHook] o.e.j.s.h.ContextHandler                 : Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@3fe28b49{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8080.12741736106226130898/],STOPPED}
+2022-12-04 16:10:12.603 [ INFO] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-04 16:10:12.859 [ WARN] [ionShutdownHook] o.s.b.f.s.DisposableBeanAdapter          : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2022-12-04 16:10:12.862 [ INFO] [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2022-12-04 16:10:12.938 [ INFO] [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2022-12-05 19:55:50.759 [ INFO] [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 6.2.5.Final
+2022-12-05 19:55:51.710 [ INFO] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-05 19:55:51.769 [ INFO] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 2 JPA repository interfaces.
+2022-12-05 19:55:52.156 [ INFO] [  restartedMain] o.e.j.u.log                              : Logging initialized @2911ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-12-05 19:55:52.389 [ INFO] [  restartedMain] o.e.j.s.Server                           : jetty-9.4.49.v20220914; built: 2022-09-14T01:07:36.601Z; git: 4231a3b2e4cb8548a412a789936d640a97b1aa0a; jvm 19+36-2238
+2022-12-05 19:55:52.417 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring embedded WebApplicationContext
+2022-12-05 19:55:52.565 [ INFO] [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-12-05 19:55:52.808 [ INFO] [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-12-05 19:55:52.896 [ INFO] [  restartedMain] o.e.j.s.session                          : DefaultSessionIdManager workerName=node0
+2022-12-05 19:55:52.897 [ INFO] [  restartedMain] o.e.j.s.session                          : No SessionScavenger set, using defaults
+2022-12-05 19:55:52.897 [ INFO] [  restartedMain] o.e.j.s.session                          : node0 Scavenging every 600000ms
+2022-12-05 19:55:52.907 [ INFO] [  restartedMain] o.e.j.s.h.ContextHandler                 : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@b85459{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8080.10788209014726388515/],AVAILABLE}
+2022-12-05 19:55:52.907 [ INFO] [  restartedMain] o.e.j.s.Server                           : Started @3664ms
+2022-12-05 19:55:53.017 [ INFO] [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-05 19:55:53.083 [ INFO] [  restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-12-05 19:55:53.241 [ INFO] [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-05 19:55:53.367 [ INFO] [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-05 19:55:53.948 [ INFO] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-05 19:55:54.047 [ INFO] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-05 19:55:55.173 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-05 19:55:55.173 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-12-05 19:55:55.175 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2022-12-05 19:55:55.197 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@758f9d2a{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-12-05 19:55:55.286 [ INFO] [  restartedMain] o.e.j.s.Server                           : jetty-9.4.49.v20220914; built: 2022-09-14T01:07:36.601Z; git: 4231a3b2e4cb8548a412a789936d640a97b1aa0a; jvm 19+36-2238
+2022-12-05 19:55:55.288 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring embedded WebApplicationContext
+2022-12-05 19:55:55.293 [ INFO] [  restartedMain] o.e.j.s.session                          : DefaultSessionIdManager workerName=node0
+2022-12-05 19:55:55.293 [ INFO] [  restartedMain] o.e.j.s.session                          : No SessionScavenger set, using defaults
+2022-12-05 19:55:55.293 [ INFO] [  restartedMain] o.e.j.s.session                          : node0 Scavenging every 600000ms
+2022-12-05 19:55:55.294 [ INFO] [  restartedMain] o.e.j.s.h.ContextHandler                 : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@5572112{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8081.2332462592473605451/],AVAILABLE}
+2022-12-05 19:55:55.295 [ INFO] [  restartedMain] o.e.j.s.Server                           : Started @6052ms
+2022-12-05 19:55:55.347 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-05 19:55:55.347 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-12-05 19:55:55.347 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
+2022-12-05 19:55:55.349 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@1743bb96{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2022-12-05 20:42:05.223 [ INFO] [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 6.2.5.Final
+2022-12-05 20:42:06.316 [ INFO] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-05 20:42:06.403 [ INFO] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 2 JPA repository interfaces.
+2022-12-05 20:42:06.811 [ INFO] [  restartedMain] o.e.j.u.log                              : Logging initialized @3194ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-12-05 20:42:07.025 [ INFO] [  restartedMain] o.e.j.s.Server                           : jetty-9.4.49.v20220914; built: 2022-09-14T01:07:36.601Z; git: 4231a3b2e4cb8548a412a789936d640a97b1aa0a; jvm 19+36-2238
+2022-12-05 20:42:07.048 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring embedded WebApplicationContext
+2022-12-05 20:42:07.175 [ INFO] [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-12-05 20:42:07.364 [ INFO] [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-12-05 20:42:07.449 [ INFO] [  restartedMain] o.e.j.s.session                          : DefaultSessionIdManager workerName=node0
+2022-12-05 20:42:07.449 [ INFO] [  restartedMain] o.e.j.s.session                          : No SessionScavenger set, using defaults
+2022-12-05 20:42:07.450 [ INFO] [  restartedMain] o.e.j.s.session                          : node0 Scavenging every 660000ms
+2022-12-05 20:42:07.459 [ INFO] [  restartedMain] o.e.j.s.h.ContextHandler                 : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@71d59e78{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8080.6388447429127431151/],AVAILABLE}
+2022-12-05 20:42:07.459 [ INFO] [  restartedMain] o.e.j.s.Server                           : Started @3842ms
+2022-12-05 20:42:07.571 [ INFO] [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-05 20:42:07.625 [ INFO] [  restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-12-05 20:42:07.773 [ INFO] [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-05 20:42:07.887 [ INFO] [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-05 20:42:08.420 [ INFO] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-05 20:42:08.505 [ INFO] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-05 20:42:09.409 [ INFO] [  restartedMain] o.s.s.w.DefaultSecurityFilterChain       : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@632b31cf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7fd4cc25, org.springframework.security.web.context.SecurityContextPersistenceFilter@65eeac73, org.springframework.security.web.header.HeaderWriterFilter@7d90fd2, org.springframework.web.filter.CorsFilter@2300d3a, org.springframework.security.web.csrf.CsrfFilter@6184fb03, org.springframework.security.web.authentication.logout.LogoutFilter@1732e6fa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3961aec, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@e24a2, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4f5f0859, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@27b76a8d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a25c0ce, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@755d9f3c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7540ed34, org.springframework.security.web.session.SessionManagementFilter@729d9cb4, org.springframework.security.web.access.ExceptionTranslationFilter@77f92b1d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@53ee4f6b]
+2022-12-05 20:42:09.503 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-05 20:42:09.503 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-12-05 20:42:09.504 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2022-12-05 20:42:09.519 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@7436b1e9{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-12-05 20:42:09.675 [ INFO] [  restartedMain] o.e.j.s.Server                           : jetty-9.4.49.v20220914; built: 2022-09-14T01:07:36.601Z; git: 4231a3b2e4cb8548a412a789936d640a97b1aa0a; jvm 19+36-2238
+2022-12-05 20:42:09.680 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring embedded WebApplicationContext
+2022-12-05 20:42:09.687 [ INFO] [  restartedMain] o.e.j.s.session                          : DefaultSessionIdManager workerName=node0
+2022-12-05 20:42:09.688 [ INFO] [  restartedMain] o.e.j.s.session                          : No SessionScavenger set, using defaults
+2022-12-05 20:42:09.688 [ INFO] [  restartedMain] o.e.j.s.session                          : node0 Scavenging every 660000ms
+2022-12-05 20:42:09.689 [ INFO] [  restartedMain] o.e.j.s.h.ContextHandler                 : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@73da3de6{application,/,[file:///private/var/folders/jh/6nk7mnj13qq3y90tkn_02vj00000gn/T/jetty-docbase.8081.10458836938862780396/],AVAILABLE}
+2022-12-05 20:42:09.689 [ INFO] [  restartedMain] o.e.j.s.Server                           : Started @6073ms
+2022-12-05 20:42:09.752 [ INFO] [  restartedMain] o.e.j.s.h.C.application                  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-05 20:42:09.752 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-12-05 20:42:09.752 [ INFO] [  restartedMain] o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
+2022-12-05 20:42:09.754 [ INFO] [  restartedMain] o.e.j.s.AbstractConnector                : Started ServerConnector@4b02c4e8{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
