@@ -10,6 +10,8 @@ import lombok.SneakyThrows;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class CourseService {
@@ -30,5 +32,22 @@ public class CourseService {
 
     public Long count() {
         return repository.count();
+    }
+
+
+    public Optional<Course> findCourseById(Long courseId) {
+        return repository.findById(courseId);
+    }
+
+    public Iterable<Course> findAllCourses() {
+        return repository.findAll();
+    }
+
+    public Course updateCourse(Course course) {
+        return repository.save(course);
+    }
+
+    public void deleteCourseById(Long courseId) {
+        repository.deleteById(courseId);
     }
 }
