@@ -4,11 +4,11 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity
-@Table(name = "AUTHORS")
+//@Entity
+//@Table(name = "AUTHORS")
 public class Author {
 
-    @Id
+    /*@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
@@ -67,5 +67,5 @@ public class Author {
                 ", bio='" + bio + '\'' +
                 ", courses=" + courses +
                 '}';
-    }
+    }*/
 }

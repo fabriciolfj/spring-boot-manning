@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-@Repository
+/*@Repository
 public interface AuthorRepository extends JpaRepository<Author, Long> {
 
     @Query("SELECT new com.manning.sbip.ch01.springbootappdemo.dto.AuthorCourseDto(c.id, a.name, c.name, c.description) " +
@@ -15,4 +15,4 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
             "and c.id = ac.courseId " +
             "and ac.authorId=?1")
     Iterable<AuthorCourseDto> getAuthorCourseInfo(long authorId);
-}
+}*/

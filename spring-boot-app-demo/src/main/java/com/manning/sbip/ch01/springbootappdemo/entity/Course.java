@@ -34,8 +34,8 @@ public class Course {
     private int rating;
     @Column(name = "DESCRIPTION")
     private String description;
-    @ManyToMany(mappedBy = "courses")
-    private Set<Author> authors = new HashSet<>();
+    /*@ManyToMany(mappedBy = "courses")
+    private Set<Author> authors = new HashSet<>();*/
 
     public Course() { }
 

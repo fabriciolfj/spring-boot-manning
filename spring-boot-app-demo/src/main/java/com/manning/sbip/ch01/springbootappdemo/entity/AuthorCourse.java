@@ -9,16 +9,16 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Entity
-@Table(name = "authors_courses")
+//@Data
+//@NoArgsConstructor
+//@AllArgsConstructor
+//@Entity
+//@Table(name = "authors_courses")
 public class AuthorCourse {
 
-    @Id
+    /*@Id
     @Column(name = "author_id")
     private long authorId;
     @Column(name = "course_id")
-    private long courseId;
+    private long courseId;*/
 }

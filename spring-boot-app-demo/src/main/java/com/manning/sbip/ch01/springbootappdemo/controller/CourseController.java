@@ -2,8 +2,6 @@ package com.manning.sbip.ch01.springbootappdemo.controller;
 
 import com.manning.sbip.ch01.springbootappdemo.entity.Course;
 import com.manning.sbip.ch01.springbootappdemo.service.CourseService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -67,7 +65,7 @@ public class CourseController {
         return "redirect:/index";
     }
 
-    @DeleteMapping("/delete/{id}")
+    @PostMapping("/delete/{id}")
     public String deleteCourse(@PathVariable("id") Long id, Model model) {
         courseService.deleteCourseById(id);
         model.addAttribute("courses", courseService.findAllCourses());
