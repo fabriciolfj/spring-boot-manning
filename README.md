@@ -418,4 +418,32 @@ http://localhost:8081/actuator/metrics/jvm.gc.pause
   - init -> invocado pelo contêiner da web, para indicar a um filtro está sendo colocado em serviço
   - destroy -> é chamado quando tira o filtro de serviço
   - doFilter -> onde a ação real do filtro e feita (a lógica) e o próximo filtro e chamado (via filter chain) ou não
-- 5.2.4
+
+
+##### Mudanças na ultima versão
+- anteriormente precisavamos extender a classe WebSecurityConfigurerAdapter, para iniciarmos a configuração de segurança no spring security
+- na ultima versão, precisamos fornecedor os recursos via beans
+- no exemplo abaixo o bean de configuração, indicando quais rotas precisaram de autenticação e quais estão abertas, alem da forma de gerenciamento do usuários.
+```
+    @Bean
+    public AuthenticationManager authenticationManager(HttpSecurity httpSecurity) throws Exception {
+        var auth = httpSecurity.getSharedObject(AuthenticationManagerBuilder.class);
+
+        return auth.userDetailsService(customUserDetailsService).and().build();
+    }
+
+    @Bean
+    @Order(Ordered.HIGHEST_PRECEDENCE)
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http.csrf().disable()
+                .authorizeRequests()
+                .antMatchers("/login").permitAll()
+                .antMatchers("/delete/**").hasRole("ADMIN")
+                .anyRequest().authenticated()
+                .and()
+                .exceptionHandling()
+                .accessDeniedHandler(accessDeniedHandler);
+
+        return http.httpBasic().and().build();
+    }
+```
