@@ -1,6 +1,11 @@
 server:
-  port: 8080
+  port: 8443
   shutdown: graceful
+  ssl:
+    key-store-type: PKCS12
+    key-store: classpath:keystore/sbip.p12
+    key-store-password: p@ssw0rd
+    key-alias: sbip
 
 spring:
   jpa:
@@ -38,8 +43,8 @@ app:
   timeout: ${APP_TIMEOUT:0}
 
 management:
-  server:
-    port: 8081
+  #server:
+  #  port: 8081
   endpoint:
     health:
       status:

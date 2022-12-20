@@ -8,6 +8,3 @@ INSERT into USERS(username, password, enabled) values ('admin','password', true)
 
 INSERT into AUTHORITIES(username, authority) values ('user','USER');
 INSERT into AUTHORITIES(username, authority) values ('admin','ADMIN');
-
-INSERT INTO CT_USERS(ID, FIRST_NAME, LAST_NAME, USERNAME, PASSWORD, EMAIL, VERIFIED, LOCKED, ACC_CRED_EXPIRED) VALUES (1, 'John', 'Socket', 'jsocket', 'password', 'jsocket@example.com', TRUE, FALSE, FALSE);
-INSERT INTO CT_USERS(ID, FIRST_NAME, LAST_NAME, USERNAME, PASSWORD, EMAIL, VERIFIED, LOCKED, ACC_CRED_EXPIRED) VALUES (2, 'Steve', 'Smith', 'smith', 'password', 'smith@example.com', FALSE, FALSE, FALSE);

@@ -17,8 +17,8 @@ public class ApplicationUser {
     private String username;
     private String email;
     private String password;
-    private boolean verified;
+    /*private boolean verified;
     private boolean locked;
     @Column(name = "ACC_CRED_EXPIRED")
-    private boolean accountCredentialsExpired;
+    private boolean accountCredentialsExpired;*/
 }

@@ -26,9 +26,9 @@ public class CustomUserDetailsService implements UserDetailsService {
         return User.builder()
                 .username(applicationUser.getUsername())
                 .password(applicationUser.getPassword())
-                .disabled(!applicationUser.isVerified())
-                .accountExpired(applicationUser.isAccountCredentialsExpired())
-                .accountLocked(applicationUser.isLocked())
+                .disabled(false)
+                .accountExpired(false)
+                .accountLocked(false)
                 .roles("USER")
                 .build();
     }

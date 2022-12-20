@@ -41,14 +41,11 @@ create table authorities (
 create unique index ix_auth_username on authorities (username,authority);
 
 create table ct_users(
-    ID int	NOT NULL,
+    ID int	NOT NULL auto_increment,
     EMAIL	VARCHAR(255)	NOT NULL,
     FIRST_NAME	VARCHAR(255) NOT NULL,
     LAST_NAME	VARCHAR(255) NOT NULL,
     PASSWORD	VARCHAR(255) NOT NULL,
     USERNAME	VARCHAR(255) NOT NULL,
-    VERIFIED	boolean NOT NULL,
-    LOCKED boolean NOT NULL,
-    ACC_CRED_EXPIRED boolean NOT NULL,
     PRIMARY KEY (ID)
 );

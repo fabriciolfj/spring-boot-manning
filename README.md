@@ -447,3 +447,8 @@ http://localhost:8081/actuator/metrics/jvm.gc.pause
         return http.httpBasic().and().build();
     }
 ```
+
+##### Vault
+- funciona como um cofre, aonde colocamos as informações sensíveis ou segredos da nosssa app
+- configuramos o servidor vault e o integramos com a nossa aplicação, via spring cloud vault.
+- exemplo de configuração: https://github.com/spring-boot-in-practice/repo/wiki/Installing-and-Configuring-HashiCorp-Vault
