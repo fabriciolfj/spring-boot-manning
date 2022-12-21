@@ -1,9 +1,9 @@
 package com.manning.sbip.ch01.springbootappdemo.validations;
 
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
 import org.passay.*;
 
-import javax.validation.ConstraintValidator;
-import javax.validation.ConstraintValidatorContext;
 import java.util.ArrayList;
 import java.util.List;
 

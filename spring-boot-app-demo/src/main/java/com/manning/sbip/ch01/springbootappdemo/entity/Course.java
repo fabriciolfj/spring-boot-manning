@@ -1,15 +1,13 @@
 package com.manning.sbip.ch01.springbootappdemo.entity;
 
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
-
-import javax.persistence.*;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import java.util.HashSet;
-import java.util.Set;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import lombok.*;
 
 
+@AllArgsConstructor
+@Builder
 @ToString
 @Table(name = "COURSES")
 @Entity

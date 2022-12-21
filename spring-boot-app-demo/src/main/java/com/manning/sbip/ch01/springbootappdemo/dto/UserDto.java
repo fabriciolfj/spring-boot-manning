@@ -1,11 +1,10 @@
 package com.manning.sbip.ch01.springbootappdemo.dto;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotEmpty;
 
 @Data
 @NoArgsConstructor

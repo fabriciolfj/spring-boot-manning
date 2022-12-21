@@ -4,14 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.ConstructorBinding;
 
 import java.util.List;
 
 @ToString
 @Getter
 @AllArgsConstructor
-@ConstructorBinding
 @ConfigurationProperties("app.sbip.ct")
 public class ApplicationProperties {
 

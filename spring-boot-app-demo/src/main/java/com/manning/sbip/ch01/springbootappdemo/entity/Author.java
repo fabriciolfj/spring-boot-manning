@@ -1,6 +1,6 @@
 package com.manning.sbip.ch01.springbootappdemo.entity;
 
-import javax.persistence.*;
+
 import java.util.HashSet;
 import java.util.Set;
 

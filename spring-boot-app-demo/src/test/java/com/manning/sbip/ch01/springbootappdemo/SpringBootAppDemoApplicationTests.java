@@ -1,8 +1,7 @@
 package com.manning.sbip.ch01.springbootappdemo;
-
+/*
 import com.manning.sbip.ch01.springbootappdemo.entity.Course;
 import com.manning.sbip.ch01.springbootappdemo.entity.QCourse;
-import com.manning.sbip.ch01.springbootappdemo.repository.AuthorRepository;
 import com.manning.sbip.ch01.springbootappdemo.repository.CourseRepository;
 import com.querydsl.core.types.OrderSpecifier;
 import com.querydsl.jpa.impl.JPAQuery;
@@ -15,12 +14,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
-import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
 import java.util.Arrays;
 import java.util.List;
 
@@ -153,3 +146,4 @@ class SpringBootAppDemoApplicationTests {
 	}
 
 }
+*/

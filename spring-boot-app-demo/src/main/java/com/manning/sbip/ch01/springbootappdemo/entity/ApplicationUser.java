@@ -1,8 +1,9 @@
 package com.manning.sbip.ch01.springbootappdemo.entity;
 
+import jakarta.persistence.*;
 import lombok.Data;
 
-import javax.persistence.*;
+
 
 @Entity
 @Table(name = "CT_USERS")

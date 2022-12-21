@@ -2,6 +2,7 @@ package com.manning.sbip.ch01.springbootappdemo.controller;
 
 import com.manning.sbip.ch01.springbootappdemo.dto.UserDto;
 import com.manning.sbip.ch01.springbootappdemo.service.UserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import javax.validation.Valid;
 
 @Controller
 public class RegistrationController {

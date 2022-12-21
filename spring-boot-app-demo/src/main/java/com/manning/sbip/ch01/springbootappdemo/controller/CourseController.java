@@ -2,74 +2,50 @@ package com.manning.sbip.ch01.springbootappdemo.controller;
 
 import com.manning.sbip.ch01.springbootappdemo.entity.Course;
 import com.manning.sbip.ch01.springbootappdemo.service.CourseService;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-import java.util.Collections;
-import java.util.List;
 
-
-@Controller
+@RestController
+@RequestMapping("/courses")
+@RequiredArgsConstructor
 public class CourseController {
 
     private final CourseService courseService;
 
-    public CourseController(CourseService courseService) {
-        this.courseService = courseService;
+    @GetMapping
+    public Iterable<Course> getAllCourses() {
+        return courseService.findAllCourses();
     }
 
-    @GetMapping("/")
-    public String index() {
-        return "redirect:/index";
+    @GetMapping("/{id}")
+    public Course getCourseById(@PathVariable("id") final long courseId) {
+        return courseService.findCourseById(courseId);
     }
 
-    @GetMapping("/index")
-    public String index(Model model) {
-        List<Course> courseList = (List<Course>) courseService.findAllCourses();
-        model.addAttribute("courses", courseList.isEmpty() ? Collections.EMPTY_LIST : courseList);
-        return "index";
+    @GetMapping("/category/{name}")
+    public Iterable<Course> getCourseByCategory(@PathVariable("name") final String name) {
+        return courseService.getCoursesByCategory(name);
     }
 
-    @GetMapping("/addcourse")
-    public String showAddCourseForm(Course course) {
-        return "add-course";
+    @PostMapping
+    public Course createCourse(@RequestBody final Course course) {
+        return courseService.createCourse(course);
     }
 
-    @PostMapping("/addcourse")
-    public String addCourse(@Valid Course course, BindingResult result, Model model){
-        if (result.hasErrors()) {
-            return "add-course";
-        }
-        courseService.createCourse(course);
-        model.addAttribute("courses", courseService.findAllCourses());
-        return "redirect:/index";
+    @PutMapping("/{id}")
+    public void updateCourse(@PathVariable("id") final long courseId, @RequestBody final Course course) {
+        courseService.updateCourse(courseId, course);
     }
 
-    @GetMapping("/update/{id}")
-    public String showUpdateCourseForm(@PathVariable("id") Long id, Model model) {
-        model.addAttribute("course", courseService.findCourseById(id).get());
-        return "update-course";
+    @DeleteMapping("/{id}")
+    public void deleteCourseById(@PathVariable("id") final long courseId) {
+        courseService.deleteCourseById(courseId);
     }
 
-    @PutMapping("/update/{id}")
-    public String updateCourse(@PathVariable("id") Long id, @Valid Course course, BindingResult result, Model model) {
-        if (result.hasErrors()) {
-            course.setId(id);
-            return "update-course";
-        }
-        courseService.updateCourse(course);
-        model.addAttribute("courses", courseService.findAllCourses());
-        return "redirect:/index";
-    }
-
-    @PostMapping("/delete/{id}")
-    public String deleteCourse(@PathVariable("id") Long id, Model model) {
-        courseService.deleteCourseById(id);
-        model.addAttribute("courses", courseService.findAllCourses());
-        return "redirect:/index";
+    @DeleteMapping
+    public void deleteCourses() {
+        courseService.deleteCourses();
     }
 
 }

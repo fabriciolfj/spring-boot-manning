@@ -52,20 +52,22 @@ public class SecurityConfiguration {
     @Bean
     @Order(Ordered.HIGHEST_PRECEDENCE)
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.requiresChannel().anyRequest().requiresSecure()
+        http.requiresChannel()
+                //.anyRequest().requiresSecure()
                 .and().csrf().disable()
-                .authorizeRequests()
-                .antMatchers("/login", "/adduser", "/login-error").permitAll()
-                .antMatchers("/delete/**").hasRole("ADMIN")
-                .anyRequest().authenticated()
+                .cors().disable()
+                .authorizeHttpRequests()
+                .requestMatchers("/**").permitAll()
+                //.requestMatchers("/delete/**").hasRole("ADMIN")
+                //.anyRequest().authenticated()
                 .and()
                 .exceptionHandling()
                 .accessDeniedHandler(accessDeniedHandler);
 
-        return http.formLogin(f -> f.loginPage("/login").failureUrl("/login-error")).build();
+        return http.formLogin().disable().build();
     }
 
-    @Bean
+    /*@Bean
     public ServletWebServerFactory servletContainer() {
         TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
             @Override
@@ -132,6 +134,6 @@ public class SecurityConfiguration {
     public WebSecurityCustomizer webSecurityCustomizer() {
         return (web) -> web
                 .ignoring()
-                .antMatchers("/resources/**", "/static/**", "/webjars/**", "/images/**", "/css/**", "/h2-console/**", "/js/**", "/img/**", "/lib/**", "/favicon.ico");
+                .requestMatchers("/resources/**", "/static/**", "/webjars/**", "/images/**", "/css/**", "/h2-console/**", "/js/**", "/img/**", "/lib/**", "/favicon.ico");
     }
 }
