@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 @Repository
-public interface CourseRepository extends JpaRepository<Course, Long>, QuerydslPredicateExecutor<Course>, PagingAndSortingRepository<Course, Long> {
+public interface CourseRepository extends JpaRepository<Course, Long>, PagingAndSortingRepository<Course, Long> {
 
     //Iterable<Course> findAllByCategory(final String category);
     Iterable<Course> findAllByCategoryOrderByName(final String category);

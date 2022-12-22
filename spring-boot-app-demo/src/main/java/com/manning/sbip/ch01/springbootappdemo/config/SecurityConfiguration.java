@@ -56,13 +56,12 @@ public class SecurityConfiguration {
                 //.anyRequest().requiresSecure()
                 .and().csrf().disable()
                 .cors().disable()
-                .authorizeHttpRequests()
-                .requestMatchers("/**").permitAll()
+                //.requestMatchers("/**").permitAll()
                 //.requestMatchers("/delete/**").hasRole("ADMIN")
-                //.anyRequest().authenticated()
-                .and()
-                .exceptionHandling()
-                .accessDeniedHandler(accessDeniedHandler);
+                .oauth2ResourceServer().jwt();
+               // .and()
+                //.exceptionHandling()
+                //.accessDeniedHandler(accessDeniedHandler);
 
         return http.formLogin().disable().build();
     }

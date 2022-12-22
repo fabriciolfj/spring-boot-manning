@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  keycloak:
+    image: jboss/keycloak:14.0.0
+    container_name: "keycloak"
+      #volumes:
+    #  - ./keycloak:/opt/jboss/keycloak/imports
+    #command:
+    # - "-b 0.0.0.0 -Dkeycloak.import=/opt/jboss/keycloak/imports/realm-export.json"
+    environment:
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: password
+    ports:
+      - "8080:8080"

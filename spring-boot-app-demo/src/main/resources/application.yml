@@ -8,6 +8,11 @@ server:
 #    key-alias: sbip
 
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/auth/realms/master
   jpa:
     hibernate:
       ddl-auto: none
@@ -31,6 +36,8 @@ spring:
     timeout-per-shutdown-phase: 1m
 
 app:
+  description: Spring boot course
+  version: V1
   sbip:
     ct:
       name: Rastreador de cursos

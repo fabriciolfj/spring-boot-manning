@@ -452,3 +452,18 @@ http://localhost:8081/actuator/metrics/jvm.gc.pause
 - funciona como um cofre, aonde colocamos as informações sensíveis ou segredos da nosssa app
 - configuramos o servidor vault e o integramos com a nossa aplicação, via spring cloud vault.
 - exemplo de configuração: https://github.com/spring-boot-in-practice/repo/wiki/Installing-and-Configuring-HashiCorp-Vault
+
+##### Documentação api
+- openapi -> uma especificação da documentação de uma api
+- swagger -> uma ferramenta que implementa a especificação openapi
+
+#### Segurança 
+- existem algumas técnicas para proteger nossas apis, a indicada é o uso de um token enriquecido
+- o mais utilizado é o jwt (json web token)
+- podemos combinar o mesmo com a adoção das especificações do oauth2
+- onde necessitaremos de um authenticator manager, uma aplicação responsável por gerenciar as credenciais, validar tokens e cadastro dos usuários e app clientes.
+- em resumo seria o seguinte processo:
+  - cliente efetua a requisição ao authenticator manager para obter o token
+  - com o token o mesmo informa-o no cabeçalho da requisição a api
+  - o servidor (aonde encontra-se a api, faz o papel do resource manager) valida o token junto ao authenticator manager
+  - caso o token seja válido, retorna a resposta com sucesso, senão, informa um 403
