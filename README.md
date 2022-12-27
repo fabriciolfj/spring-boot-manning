@@ -478,3 +478,9 @@ http://localhost:8081/actuator/metrics/jvm.gc.pause
   - sinal de concluído
 - para pegarmos esse 3 sinais, devemos "ouvir" o fluxo ou melhor, os eventos (esse processo do lado do cliente chama assinatura)
 - para ouvir usamos funções, que chamamos de observaveis
+
+### Contrapressão
+- no mundo reativo, trabalhamos com fluxos, onde temos quem produz os dados no fluxo e quem consome
+- quem produz pode emitir dados mais rapido de quem consume, gerando um garga-lo no mesmo.
+- existem algunas estratégias para isso, como utilizar um buffer do lado do consumidor, mas o ideal seria o consumidor solicitar os eventos conforme sua capacitdade de processamento.
+- exemplo request(4), consumidor solicita ao produtor 4 eventos, e este envia os 4 ou a quantidade disponivel (caso seja inferior a 4)
