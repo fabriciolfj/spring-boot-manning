@@ -467,3 +467,14 @@ http://localhost:8081/actuator/metrics/jvm.gc.pause
   - com o token o mesmo informa-o no cabeçalho da requisição a api
   - o servidor (aonde encontra-se a api, faz o papel do resource manager) valida o token junto ao authenticator manager
   - caso o token seja válido, retorna a resposta com sucesso, senão, informa um 403
+
+## Programação reativa
+- programação reativa se caracteriza pelo processamento assincrono de um fluxo de dados
+  - fuxo de dados é a propagação de dado um atráz do outro, em um intervalo de tempo
+  - processamento assincrono é quando o resultado deste, apresenta-se em outro momento e não na thread que o solicitou.
+- um fluxo pode emitir 3 coisas:
+  - um item
+  - sinal de erro
+  - sinal de concluído
+- para pegarmos esse 3 sinais, devemos "ouvir" o fluxo ou melhor, os eventos (esse processo do lado do cliente chama assinatura)
+- para ouvir usamos funções, que chamamos de observaveis
