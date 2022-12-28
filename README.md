@@ -484,3 +484,11 @@ http://localhost:8081/actuator/metrics/jvm.gc.pause
 - quem produz pode emitir dados mais rapido de quem consume, gerando um garga-lo no mesmo.
 - existem algunas estratégias para isso, como utilizar um buffer do lado do consumidor, mas o ideal seria o consumidor solicitar os eventos conforme sua capacitdade de processamento.
 - exemplo request(4), consumidor solicita ao produtor 4 eventos, e este envia os 4 ou a quantidade disponivel (caso seja inferior a 4)
+
+## Projeto reactor
+- é um padrão/especificação para bibliotecas orientadas ao fluxo de dados
+- ele possui 4 interfaces:
+  - publisher -> que publica os dados, emite os itens
+  - subscriber -> é o assinante, que quer receber os eventos/itens
+  - subscriptions -> é a assinatura, ou seja, a relação entre subscriber e publisher, onde o assinante pode solicitar mais eventos ou cancelar sua assinatura.
+  - processor -> representa o estagio de processameto dos eventos
