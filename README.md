@@ -492,3 +492,12 @@ http://localhost:8081/actuator/metrics/jvm.gc.pause
   - subscriber -> é o assinante, que quer receber os eventos/itens
   - subscriptions -> é a assinatura, ou seja, a relação entre subscriber e publisher, onde o assinante pode solicitar mais eventos ou cancelar sua assinatura.
   - processor -> representa o estagio de processameto dos eventos
+
+### WebClient
+- spring webflux fornece a api webclient, um cliente http para chamadas reativas
+
+## Websocket
+- estabelece um canal de comunicação bidirecional full-duplex entre cliente e servidor em uma única conexão TCP
+- onde após estabelecida a comunicação, servidor envia mensagens ao cliente e este as confirma se recebe e processou as com sucesso
+- obs: para o estabelecimento do canal, e conexão entre cliente e servidor e feita via protocolo http (http handshake)
+- para o websocker reativo, segue meu post https://dev.to/fabriciolfj/rsocket-e-websocket-1d85

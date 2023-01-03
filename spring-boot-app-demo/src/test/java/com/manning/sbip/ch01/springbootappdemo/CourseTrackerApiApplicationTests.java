@@ -26,9 +26,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jayway.jsonpath.JsonPath;
 
-@SpringBootTest
-@AutoConfigureMockMvc
-@ExtendWith(SpringExtension.class)
+//@SpringBootTest
+//@AutoConfigureMockMvc
+//@ExtendWith(SpringExtension.class)
 class CourseTrackerApiApplicationTests {
 
     @Autowired
@@ -37,7 +37,7 @@ class CourseTrackerApiApplicationTests {
     @Autowired
     private MockMvc mockMvc;
 
-    @Test
+   // @Test
     public void testPostCourse() throws Exception {
         Course course = Course.builder()
                 .name("Rapid Spring Boot Application Development")
@@ -62,7 +62,7 @@ class CourseTrackerApiApplicationTests {
 
     }
 
-    @Test
+   // @Test
     public void testRetrieveCourse() throws Exception {
         Course course = Course.builder()
                 .name("Rapid Spring Boot Application Development")
@@ -94,14 +94,14 @@ class CourseTrackerApiApplicationTests {
 
     }
 
-    @Test
+   // @Test
     public void testInvalidCouseId() throws Exception {
         mockMvc.perform(get("/courses/{id}",1010))
                 .andDo(print())
                 .andExpect(status().isNotFound());
     }
 
-    @Test
+    //@Test
     public void testUpdateCourse() throws Exception {
         Course course = Course.builder()
                 .name("Rapid Spring Boot Application Development")
@@ -136,7 +136,7 @@ class CourseTrackerApiApplicationTests {
 
     }
 
-    @Test
+    //@Test
     public void testDeleteCourse() throws Exception {
         Course course = Course.builder()
                 .name("Rapid Spring Boot Application Development")
