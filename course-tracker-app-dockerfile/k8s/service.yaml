@@ -3,16 +3,16 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: course-tracker-service
-  name: course-tracker-service
+    app: course-tracker
+  name: course-tracker
 spec:
+  type: ClusterIP
   ports:
   - name: 80-8080
-    port: 80
+    port: 8080
     protocol: TCP
     targetPort: 8080
   selector:
-    app: course-tracker-service
-  type: ClusterIP
+    app: course-tracker
 status:
   loadBalancer: {}
